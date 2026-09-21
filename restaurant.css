@@ -1,0 +1,197 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #111;
+}
+
+
+/* NAVBAR */
+
+.navbar {
+    height: 70px;
+    background-color: #ffb6c1;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 40px;
+}
+
+
+/* BiteBuddy Logo */
+
+.logo {
+    font-family: Georgia, serif;
+    font-size: 27px;
+    font-weight: bold;
+    font-style: italic;
+    color: #5b1018;
+}
+
+
+/* Navigation */
+
+.navbar nav {
+    display: flex;
+    gap: 28px;
+}
+
+.navbar nav a {
+    text-decoration: none;
+    color: #111;
+    font-size: 16px;
+}
+
+.navbar nav a:hover {
+    color: #e85d04;
+}
+
+
+/* RESTAURANT SECTION */
+
+.restaurant-section {
+    padding: 55px 40px;
+    text-align: center;
+}
+
+.restaurant-section h1 {
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+.section-subtitle {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+
+/* RESTAURANT CONTAINER */
+
+.restaurant-container {
+    max-width: 1100px;
+    margin: auto;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+
+/* RESTAURANT CARD */
+
+.restaurant-card {
+    width: 300px;
+
+    background-color: white;
+
+    border: 1px solid #ddd;
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    text-align: center;
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+
+/* Card Hover */
+
+.restaurant-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+}
+
+
+/* RESTAURANT IMAGE */
+
+.restaurant-card img {
+    width: 100%;
+    height: 190px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* RESTAURANT INFORMATION */
+
+.restaurant-info {
+    padding: 20px;
+}
+
+.restaurant-info h2 {
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.restaurant-info p {
+    color: #555;
+    margin-bottom: 8px;
+    font-size: 15px;
+}
+
+
+/* VIEW MENU BUTTON */
+
+.view-menu {
+    display: inline-block;
+
+    margin-top: 10px;
+
+    padding: 10px 22px;
+
+    background-color: #ff5a00;
+    color: white;
+
+    text-decoration: none;
+
+    border-radius: 5px;
+
+    transition: background-color 0.3s ease;
+}
+
+.view-menu:hover {
+    background-color: #d94800;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        height: auto;
+        padding: 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navbar nav {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .restaurant-section {
+        padding: 40px 20px;
+    }
+
+    .restaurant-card {
+        width: 100%;
+        max-width: 350px;
+    }
+}
