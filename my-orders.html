@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="View your order history, track live deliveries, and reorder your favorite meals on BiteBuddy.">
+    <title>My Orders — BiteBuddy</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <!-- ===== Header ===== -->
+    <header class="site-header">
+        <div class="container">
+            <a href="index.html" class="logo">🍔 Bite<span>Buddy</span></a>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="restaurants.html">Restaurants</a>
+                <a href="food-menu.html">Menu</a>
+                <a href="about.html">About</a>
+                <a href="my-orders.html" class="active">My Orders</a>
+                <a href="cart.html">Cart</a>
+                <a href="profile.html">Profile</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="login.html" class="btn btn-secondary btn-sm">Login</a>
+                <a href="register.html" class="btn btn-primary btn-sm">Register</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ===== Page Header ===== -->
+        <section class="page-header">
+            <div class="container">
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a> / <span>My Orders</span>
+                </div>
+                <h1>My Orders</h1>
+                <p>Track your current deliveries and explore past orders</p>
+            </div>
+        </section>
+
+        <!-- ===== Orders List Section ===== -->
+        <section class="section">
+            <div class="container" style="max-width: 900px;">
+                <!-- Filter Pills -->
+                <div class="category-nav mb-3">
+                    <a href="#all" class="category-nav-item active">All Orders (5)</a>
+                    <a href="#active" class="category-nav-item">Active Orders (1)</a>
+                    <a href="#delivered" class="category-nav-item">Delivered (3)</a>
+                    <a href="#cancelled" class="category-nav-item">Cancelled (1)</a>
+                </div>
+
+                <!-- Order 1: Live / In Progress -->
+                <div class="order-card" style="border-left: 4px solid var(--warning);">
+                    <div class="order-header">
+                        <div>
+                            <h4>Order #FD10245</h4>
+                            <span class="text-muted" style="font-size: 0.8125rem;">Placed on Today, Sep 22, 2026 • 09:45 PM</span>
+                        </div>
+                        <span class="badge badge-warning">⚡ Preparing in Kitchen</span>
+                    </div>
+                    <div style="margin-bottom: 12px; font-size: 0.9375rem;">
+                        <strong>Spice Route & Partner Kitchens</strong>
+                        <p class="text-muted" style="margin: 4px 0 0; font-size: 0.875rem;">
+                            1× Paneer Tikka, 2× Chicken Biryani, 1× Cold Coffee
+                        </p>
+                    </div>
+                    <div class="order-details">
+                        <div>
+                            <span class="detail-label">Items Count</span>
+                            <span class="detail-value">3 items (4 qty)</span>
+                        </div>
+                        <div>
+                            <span class="detail-label">Payment Method</span>
+                            <span class="detail-value">Cash on Delivery</span>
+                        </div>
+                        <div>
+                            <span class="detail-label">Total Amount</span>
+                            <span class="detail-value" style="color: var(--primary);">₹868</span>
+                        </div>
+                        <div style="text-align: right; display: flex; align-items: flex-end; justify-content: flex-end; gap: 8px;">
+                            <a href="order-confirmation.html" class="btn btn-secondary btn-sm">Track Status</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Order 2: Delivered -->
+                <div class="order-card">
+                    <div class="order-header">
+                        <div>
+                            <h4>Order #FD10212</h4>
+                            <span class="text-muted" style="font-size: 0.8125rem;">Placed on Sep 19, 2026 • 08:15 PM</span>
+                        </div>
+                        <span class="badge badge-success">✓ Delivered</span>
+                    </div>
+                    <div style="margin-bottom: 12px; font-size: 0.9375rem;">
+                        <strong>Pizza Palace</strong>
+                        <p class="text-muted" style="margin: 4px 0 0; font-size: 0.875rem;">
+                            1× Margherita Pizza (Large), 1× Cheesy Garlic Bread
+                        </p>
+                    </div>
+                    <div class="order-details">
+                        <div>
+                            <span class="detail-label">Items Count</span>
+                            <span class="detail-value">2 items</span>
+                        </div>
+                        <div>
+                            <span class="detail-label">Payment Method</span>
+                            <span class="detail-value">UPI (GPay)</span>
+                        </div>
+                        <div>
+                            <span class="detail-label">Total Amount</span>
+                            <span class="detail-value">₹349</span>
+                        </div>
+                        <div style="text-align: right; display: flex; align-items: flex-end; justify-content: flex-end; gap: 8px;">
+                            <a href="cart.html" class="btn btn-primary btn-sm">Reorder</a>
+                            <a href="restaurant-details.html" class="btn btn-secondary btn-sm">View Menu</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Order 3: Delivered -->
+                <div class="order-card">
+                    <div class="order-header">
+                        <div>
+                            <h4>Order #FD10188</h4>
+                            <span class="text-muted" style="font-size: 0.8125rem;">Placed on Sep 15, 2026 • 01:30 PM</span>
+                        </div>
+                        <span class="badge badge-success">✓ Delivered</span>
+                    </div>
+                    <div style="margin-bottom: 12px; font-size: 0.9375rem;">
+                        <strong>The Burger House</strong>
+                        <p class="text-muted" style="margin: 4px 0 0; font-size: 0.875rem;">
+                            1× Classic Chicken Burger, 1× Peri Peri French Fries
+                        </p>
+                    </div>
+                    <div class="order-details">
+                        <div>
+                            <span class="detail-label">Items Count</span>
+                            <span class="detail-value">2 items</span>
+                        </div>
+                        <div>
+                            <span class="detail-label">Payment Method</span>
+                            <span class="detail-value">Credit Card</span>
+                        </div>
+                        <div>
+                            <span class="detail-label">Total Amount</span>
+                            <span class="detail-value">₹249</span>
+                        </div>
+                        <div style="text-align: right; display: flex; align-items: flex-end; justify-content: flex-end; gap: 8px;">
+                            <a href="cart.html" class="btn btn-primary btn-sm">Reorder</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Order 4: Delivered -->
+                <div class="order-card">
+                    <div class="order-header">
+                        <div>
+                            <h4>Order #FD10142</h4>
+                            <span class="text-muted" style="font-size: 0.8125rem;">Placed on Sep 10, 2026 • 12:45 PM</span>
+                        </div>
+                        <span class="badge badge-success">✓ Delivered</span>
+                    </div>
+                    <div style="margin-bottom: 12px; font-size: 0.9375rem;">
+                        <strong>Green Bowl</strong>
+                        <p class="text-muted" style="margin: 4px 0 0; font-size: 0.875rem;">
+                            1× Mediterranean Veggie Bowl, 1× Fresh Orange Juice
+                        </p>
+                    </div>
+                    <div class="order-details">
+                        <div>
+                            <span class="detail-label">Items Count</span>
+                            <span class="detail-value">2 items</span>
+                        </div>
+                        <div>
+                            <span class="detail-label">Payment Method</span>
+                            <span class="detail-value">UPI (Paytm)</span>
+                        </div>
+                        <div>
+                            <span class="detail-label">Total Amount</span>
+                            <span class="detail-value">₹288</span>
+                        </div>
+                        <div style="text-align: right; display: flex; align-items: flex-end; justify-content: flex-end; gap: 8px;">
+                            <a href="cart.html" class="btn btn-primary btn-sm">Reorder</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Order 5: Cancelled -->
+                <div class="order-card" style="opacity: 0.9;">
+                    <div class="order-header">
+                        <div>
+                            <h4>Order #FD10091</h4>
+                            <span class="text-muted" style="font-size: 0.8125rem;">Placed on Sep 04, 2026 • 07:10 PM</span>
+                        </div>
+                        <span class="badge badge-danger">✕ Cancelled</span>
+                    </div>
+                    <div style="margin-bottom: 12px; font-size: 0.9375rem;">
+                        <strong>Café Aroma</strong>
+                        <p class="text-muted" style="margin: 4px 0 0; font-size: 0.875rem;">
+                            1× Chocolate Brownie Sundae, 1× Hazelnut Cappuccino
+                        </p>
+                    </div>
+                    <div class="order-details">
+                        <div>
+                            <span class="detail-label">Items Count</span>
+                            <span class="detail-value">2 items</span>
+                        </div>
+                        <div>
+                            <span class="detail-label">Payment Method</span>
+                            <span class="detail-value">Refunded to UPI</span>
+                        </div>
+                        <div>
+                            <span class="detail-label">Total Amount</span>
+                            <span class="detail-value">₹218</span>
+                        </div>
+                        <div style="text-align: right; display: flex; align-items: flex-end; justify-content: flex-end; gap: 8px;">
+                            <a href="cart.html" class="btn btn-secondary btn-sm">Order Again</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== Footer ===== -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <div class="logo">🍔 Bite<span>Buddy</span></div>
+                    <p>Your favorite food delivery platform. Discover great restaurants, order your favorite meals, and enjoy fast delivery right to your doorstep.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="restaurants.html">Restaurants</a></li>
+                        <li><a href="food-menu.html">Food Menu</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>My Account</h4>
+                    <ul>
+                        <li><a href="profile.html">Profile</a></li>
+                        <li><a href="my-orders.html">My Orders</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                        <li><a href="login.html">Login</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:support@bitebuddy.com">support@bitebuddy.com</a></li>
+                        <li><a href="tel:+911234567890">+91 12345 67890</a></li>
+                        <li><a href="#">Mumbai, Maharashtra, India</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 BiteBuddy. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

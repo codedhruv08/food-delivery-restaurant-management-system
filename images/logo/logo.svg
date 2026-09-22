@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" width="240" height="60">
+    <defs>
+        <linearGradient id="burgerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#F48C06"/>
+            <stop offset="100%" stop-color="#E85D04"/>
+        </linearGradient>
+    </defs>
+    <!-- Burger Icon -->
+    <g transform="translate(10, 8)">
+        <!-- Top Bun -->
+        <path d="M6 18 C6 8, 38 8, 38 18 Z" fill="url(#burgerGrad)" />
+        <ellipse cx="14" cy="13" rx="1.5" ry="0.8" fill="#FFF" opacity="0.8" />
+        <ellipse cx="22" cy="11" rx="1.5" ry="0.8" fill="#FFF" opacity="0.8" />
+        <ellipse cx="30" cy="13" rx="1.5" ry="0.8" fill="#FFF" opacity="0.8" />
+        <!-- Patty / Veggie / Cheese -->
+        <rect x="5" y="21" width="34" height="4" rx="2" fill="#16A34A" />
+        <polygon points="12,25 18,29 24,25" fill="#EAB308" />
+        <rect x="5" y="27" width="34" height="5" rx="2.5" fill="#78350F" />
+        <!-- Bottom Bun -->
+        <path d="M6 34 C6 39, 38 39, 38 34 Z" fill="url(#burgerGrad)" />
+    </g>
+    <!-- Brand Name Text -->
+    <text x="62" y="38" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="28" font-weight="800" fill="#1F2937" letter-spacing="-0.5">
+        Bite<tspan fill="#E85D04">Buddy</tspan>
+    </text>
+    <!-- Small Tagline -->
+    <text x="64" y="49" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="9" font-weight="600" fill="#6B7280" letter-spacing="1.2">
+        FOOD DELIVERY
+    </text>
+</svg>

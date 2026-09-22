@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Manage Food Items Catalog - Audit food items, prices, culinary categories, and compliance on BiteBuddy.">
+    <title>Manage Food Items — BiteBuddy Admin</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+    <div class="dashboard-layout">
+        <!-- ===== Sidebar ===== -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>⚡ BiteBuddy Admin</h2>
+                <p>Master Platform Control</p>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <div class="nav-section-title">Overview</div>
+                    <a href="index.html"><span class="nav-icon">📈</span> Dashboard</a>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Management</div>
+                    <a href="users.html"><span class="nav-icon">👥</span> Users</a>
+                    <a href="restaurants.html"><span class="nav-icon">🏪</span> Restaurants</a>
+                    <a href="food-items.html" class="active"><span class="nav-icon">🍔</span> Food Items</a>
+                    <a href="orders.html"><span class="nav-icon">📦</span> Orders</a>
+                    <a href="reviews.html"><span class="nav-icon">⭐</span> Reviews</a>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Portals</div>
+                    <a href="../restaurant-dashboard/index.html"><span class="nav-icon">👨‍🍳</span> Restaurant Panel</a>
+                    <a href="../index.html"><span class="nav-icon">🏠</span> Customer Site</a>
+                </div>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="../login.html"><span class="nav-icon">🚪</span> Logout</a>
+            </div>
+        </aside>
+
+        <!-- ===== Main Content ===== -->
+        <div class="dashboard-main">
+            <!-- Header -->
+            <header class="dashboard-header">
+                <div>
+                    <h1>Platform Food Catalog</h1>
+                    <p class="text-muted" style="margin-bottom: 0; font-size: 0.875rem;">Audit culinary listings, monitor prices, and ensure menu compliance across all kitchens</p>
+                </div>
+                <div class="header-right">
+                    <a href="../food-menu.html" class="btn btn-secondary btn-sm">👁️ Preview Public Menu</a>
+                </div>
+            </header>
+
+            <!-- Content Area -->
+            <div class="dashboard-content">
+                <!-- Filters Bar -->
+                <div class="dashboard-filters">
+                    <span class="filter-label">Filter Catalog:</span>
+                    <input type="search" placeholder="Search dish name or ingredient...">
+                    <select>
+                        <option value="">All Restaurants</option>
+                        <option value="spice">Spice Route</option>
+                        <option value="burger">The Burger House</option>
+                        <option value="pizza">Pizza Palace</option>
+                        <option value="biryani">Royal Biryani</option>
+                        <option value="green">Green Bowl</option>
+                        <option value="aroma">Café Aroma</option>
+                    </select>
+                    <select>
+                        <option value="">All Categories</option>
+                        <option value="burgers">Burgers</option>
+                        <option value="pizza">Pizza</option>
+                        <option value="biryani">Biryani</option>
+                        <option value="starters">Starters</option>
+                        <option value="salads">Salads</option>
+                        <option value="desserts">Desserts</option>
+                        <option value="beverages">Beverages</option>
+                    </select>
+                </div>
+
+                <!-- Food Items Table Card -->
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <h3>Catalog Dishes (8 sample entries)</h3>
+                        <span class="badge badge-primary">Total 4,120 Dishes</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive" style="border: none;">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Dish</th>
+                                        <th>Restaurant</th>
+                                        <th>Category</th>
+                                        <th>Price</th>
+                                        <th>Availability</th>
+                                        <th>Customer Rating</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div style="display: flex; align-items: center; gap: 12px;">
+                                                <div class="table-img">
+                                                    <img src="../images/food/classic-burger.jpg" alt="Classic Chicken Burger">
+                                                </div>
+                                                <div>
+                                                    <strong>Classic Chicken Burger</strong>
+                                                    <div class="text-muted" style="font-size: 0.75rem;">ID: #F101 • Non-Veg</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>The Burger House</td>
+                                        <td><span class="badge badge-info">Burgers</span></td>
+                                        <td><strong>₹179</strong></td>
+                                        <td><span class="badge badge-success">In Stock</span></td>
+                                        <td><span style="color: var(--warning);">★ 4.8</span> (240)</td>
+                                        <td class="actions">
+                                            <a href="../food-details.html" class="btn btn-secondary btn-sm">Preview</a>
+                                            <button type="button" class="btn btn-secondary btn-sm">Edit</button>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <div style="display: flex; align-items: center; gap: 12px;">
+                                                <div class="table-img">
+                                                    <img src="../images/food/margherita-pizza.jpg" alt="Margherita Pizza">
+                                                </div>
+                                                <div>
+                                                    <strong>Margherita Pizza</strong>
+                                                    <div class="text-muted" style="font-size: 0.75rem;">ID: #F102 • Veg</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Pizza Palace</td>
+                                        <td><span class="badge badge-info">Pizza</span></td>
+                                        <td><strong>₹249</strong></td>
+                                        <td><span class="badge badge-success">In Stock</span></td>
+                                        <td><span style="color: var(--warning);">★ 4.7</span> (310)</td>
+                                        <td class="actions">
+                                            <a href="../food-details.html" class="btn btn-secondary btn-sm">Preview</a>
+                                            <button type="button" class="btn btn-secondary btn-sm">Edit</button>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <div style="display: flex; align-items: center; gap: 12px;">
+                                                <div class="table-img">
+                                                    <img src="../images/food/chicken-biryani.jpg" alt="Chicken Biryani Special">
+                                                </div>
+                                                <div>
+                                                    <strong>Chicken Biryani Special</strong>
+                                                    <div class="text-muted" style="font-size: 0.75rem;">ID: #F103 • Non-Veg</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Royal Biryani</td>
+                                        <td><span class="badge badge-info">Biryani</span></td>
+                                        <td><strong>₹299</strong></td>
+                                        <td><span class="badge badge-success">In Stock</span></td>
+                                        <td><span style="color: var(--warning);">★ 4.9</span> (480)</td>
+                                        <td class="actions">
+                                            <a href="../food-details.html" class="btn btn-secondary btn-sm">Preview</a>
+                                            <button type="button" class="btn btn-secondary btn-sm">Edit</button>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <div style="display: flex; align-items: center; gap: 12px;">
+                                                <div class="table-img">
+                                                    <img src="../images/food/paneer-tikka.jpg" alt="Paneer Tikka">
+                                                </div>
+                                                <div>
+                                                    <strong>Paneer Tikka</strong>
+                                                    <div class="text-muted" style="font-size: 0.75rem;">ID: #F104 • Pure Veg</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Spice Route</td>
+                                        <td><span class="badge badge-info">Starters</span></td>
+                                        <td><strong>₹219</strong></td>
+                                        <td><span class="badge badge-success">In Stock</span></td>
+                                        <td><span style="color: var(--warning);">★ 4.8</span> (142)</td>
+                                        <td class="actions">
+                                            <a href="../food-details.html" class="btn btn-secondary btn-sm">Preview</a>
+                                            <button type="button" class="btn btn-secondary btn-sm">Edit</button>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <div style="display: flex; align-items: center; gap: 12px;">
+                                                <div class="table-img">
+                                                    <img src="../images/food/veggie-bowl.jpg" alt="Mediterranean Veggie Bowl">
+                                                </div>
+                                                <div>
+                                                    <strong>Mediterranean Veggie Bowl</strong>
+                                                    <div class="text-muted" style="font-size: 0.75rem;">ID: #F105 • Vegan</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Green Bowl</td>
+                                        <td><span class="badge badge-info">Salads</span></td>
+                                        <td><strong>₹189</strong></td>
+                                        <td><span class="badge badge-success">In Stock</span></td>
+                                        <td><span style="color: var(--warning);">★ 4.5</span> (94)</td>
+                                        <td class="actions">
+                                            <a href="../food-details.html" class="btn btn-secondary btn-sm">Preview</a>
+                                            <button type="button" class="btn btn-secondary btn-sm">Edit</button>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <div style="display: flex; align-items: center; gap: 12px;">
+                                                <div class="table-img">
+                                                    <img src="../images/food/chocolate-brownie.jpg" alt="Chocolate Brownie Sundae">
+                                                </div>
+                                                <div>
+                                                    <strong>Chocolate Brownie Sundae</strong>
+                                                    <div class="text-muted" style="font-size: 0.75rem;">ID: #F106 • Veg</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Café Aroma</td>
+                                        <td><span class="badge badge-info">Desserts</span></td>
+                                        <td><strong>₹129</strong></td>
+                                        <td><span class="badge badge-success">In Stock</span></td>
+                                        <td><span style="color: var(--warning);">★ 4.6</span> (178)</td>
+                                        <td class="actions">
+                                            <a href="../food-details.html" class="btn btn-secondary btn-sm">Preview</a>
+                                            <button type="button" class="btn btn-secondary btn-sm">Edit</button>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <div style="display: flex; align-items: center; gap: 12px;">
+                                                <div class="table-img">
+                                                    <img src="../images/food/masala-dosa.jpg" alt="Mysore Masala Dosa">
+                                                </div>
+                                                <div>
+                                                    <strong>Mysore Masala Dosa</strong>
+                                                    <div class="text-muted" style="font-size: 0.75rem;">ID: #F107 • Veg</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Spice Route</td>
+                                        <td><span class="badge badge-info">South Indian</span></td>
+                                        <td><strong>₹149</strong></td>
+                                        <td><span class="badge badge-success">In Stock</span></td>
+                                        <td><span style="color: var(--warning);">★ 4.4</span> (112)</td>
+                                        <td class="actions">
+                                            <a href="../food-details.html" class="btn btn-secondary btn-sm">Preview</a>
+                                            <button type="button" class="btn btn-secondary btn-sm">Edit</button>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <div style="display: flex; align-items: center; gap: 12px;">
+                                                <div class="table-img">
+                                                    <img src="../images/food/cold-coffee.jpg" alt="Artisan Cold Coffee">
+                                                </div>
+                                                <div>
+                                                    <strong>Artisan Cold Coffee</strong>
+                                                    <div class="text-muted" style="font-size: 0.75rem;">ID: #F108 • Beverage</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Café Aroma</td>
+                                        <td><span class="badge badge-info">Beverages</span></td>
+                                        <td><strong>₹99</strong></td>
+                                        <td><span class="badge badge-success">In Stock</span></td>
+                                        <td><span style="color: var(--warning);">★ 4.5</span> (205)</td>
+                                        <td class="actions">
+                                            <a href="../food-details.html" class="btn btn-secondary btn-sm">Preview</a>
+                                            <button type="button" class="btn btn-secondary btn-sm">Edit</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

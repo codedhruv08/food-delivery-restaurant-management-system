@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Add New Food Item - Add a new dish to Spice Route menu on BiteBuddy.">
+    <title>Add Food Item — Spice Route</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+    <div class="dashboard-layout">
+        <!-- ===== Sidebar ===== -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>🏪 Spice Route</h2>
+                <p>Restaurant Partner Portal</p>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <div class="nav-section-title">Main Menu</div>
+                    <a href="index.html"><span class="nav-icon">📊</span> Dashboard</a>
+                    <a href="manage-food.html"><span class="nav-icon">🍲</span> Manage Food</a>
+                    <a href="add-food.html" class="active"><span class="nav-icon">➕</span> Add Food Item</a>
+                    <a href="orders.html"><span class="nav-icon">📦</span> Orders <span class="badge badge-warning" style="margin-left: auto;">3 New</span></a>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Customer Store</div>
+                    <a href="../restaurant-details.html"><span class="nav-icon">👁️</span> View Live Menu</a>
+                    <a href="../index.html"><span class="nav-icon">🏠</span> Customer Home</a>
+                </div>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="../login.html"><span class="nav-icon">🚪</span> Logout</a>
+            </div>
+        </aside>
+
+        <!-- ===== Main Content ===== -->
+        <div class="dashboard-main">
+            <!-- Header -->
+            <header class="dashboard-header">
+                <div>
+                    <h1>Add New Food Item</h1>
+                    <p class="text-muted" style="margin-bottom: 0; font-size: 0.875rem;">Create a new recipe entry for your customers to discover and order</p>
+                </div>
+                <div class="header-right">
+                    <a href="manage-food.html" class="btn btn-secondary btn-sm">← Back to Manage Food</a>
+                </div>
+            </header>
+
+            <!-- Content Area -->
+            <div class="dashboard-content">
+                <div class="dashboard-form" style="max-width: 800px;">
+                    <h2>Dish Details & Pricing</h2>
+                    
+                    <form action="manage-food.html" method="get">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="foodName">Food Item Name *</label>
+                                <input type="text" id="foodName" name="foodName" placeholder="e.g. Kadai Paneer Special" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="category">Category *</label>
+                                <select id="category" name="category" required>
+                                    <option value="">Select Category</option>
+                                    <option value="starters">Starters & Tandoor</option>
+                                    <option value="mains" selected>Main Course</option>
+                                    <option value="breads">Indian Breads</option>
+                                    <option value="rice">Rice & Biryani</option>
+                                    <option value="desserts">Desserts</option>
+                                    <option value="beverages">Beverages</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Dietary Classification *</label>
+                            <div style="display: flex; gap: 24px; margin-top: 6px;">
+                                <div class="form-check">
+                                    <input type="radio" id="dietVeg" name="dietType" value="veg" checked>
+                                    <label for="dietVeg">🟢 Pure Vegetarian</label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" id="dietNonVeg" name="dietType" value="nonveg">
+                                    <label for="dietNonVeg">🔴 Non-Vegetarian</label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" id="dietVegan" name="dietType" value="vegan">
+                                    <label for="dietVegan">🌱 Vegan</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="description">Item Description *</label>
+                            <textarea id="description" name="description" rows="3" placeholder="Describe taste, spices, cooking method, texture..." required></textarea>
+                            <div class="form-hint">A mouthwatering description increases order conversions by 20%.</div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="price">Regular Price (₹) *</label>
+                                <input type="number" id="price" name="price" placeholder="249" min="1" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="discountPrice">Discounted Price (₹) (Optional)</label>
+                                <input type="number" id="discountPrice" name="discountPrice" placeholder="219" min="0">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="prepTime">Preparation Time (minutes) *</label>
+                                <input type="number" id="prepTime" name="prepTime" placeholder="20" min="5" max="120" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="servingSize">Serving Size</label>
+                                <input type="text" id="servingSize" name="servingSize" placeholder="Serves 1-2 persons">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="ingredients">Ingredients (comma separated)</label>
+                            <input type="text" id="ingredients" name="ingredients" placeholder="Cottage Cheese, Bell Peppers, Onions, Kashmiri Chilli, Spices">
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="foodImage">Food Photo</label>
+                                <input type="file" id="foodImage" name="foodImage" accept="image/*">
+                                <div class="form-hint">Recommended resolution: 800x600px. JPG, PNG or WebP.</div>
+                            </div>
+                            <div class="form-group">
+                                <label for="availability">Initial Stock Status *</label>
+                                <select id="availability" name="availability">
+                                    <option value="available" selected>In Stock (Ready to order)</option>
+                                    <option value="soldout">Out of Stock (Hidden from ordering)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary btn-lg">Save & Publish Dish</button>
+                            <a href="manage-food.html" class="btn btn-secondary btn-lg">Cancel</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

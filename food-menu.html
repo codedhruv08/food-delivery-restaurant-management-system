@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse the full food menu on BiteBuddy. Filter by category and find your favorite dishes from top restaurants.">
+    <title>Food Menu — BiteBuddy</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <!-- ===== Header ===== -->
+    <header class="site-header">
+        <div class="container">
+            <a href="index.html" class="logo">🍔 Bite<span>Buddy</span></a>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="restaurants.html">Restaurants</a>
+                <a href="food-menu.html" class="active">Menu</a>
+                <a href="about.html">About</a>
+                <a href="my-orders.html">My Orders</a>
+                <a href="cart.html">Cart</a>
+                <a href="profile.html">Profile</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="login.html" class="btn btn-secondary btn-sm">Login</a>
+                <a href="register.html" class="btn btn-primary btn-sm">Register</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ===== Page Header ===== -->
+        <section class="page-header">
+            <div class="container">
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a> / <span>Food Menu</span>
+                </div>
+                <h1>Food Menu</h1>
+                <p>Explore dishes from all our partner restaurants</p>
+            </div>
+        </section>
+
+        <!-- ===== Menu Content ===== -->
+        <section class="section">
+            <div class="container">
+                <!-- Category Navigation -->
+                <nav class="category-nav">
+                    <a href="#" class="active">All</a>
+                    <a href="#">Starters</a>
+                    <a href="#">Burgers</a>
+                    <a href="#">Pizza</a>
+                    <a href="#">Biryani</a>
+                    <a href="#">South Indian</a>
+                    <a href="#">Salads</a>
+                    <a href="#">Desserts</a>
+                    <a href="#">Beverages</a>
+                </nav>
+
+                <!-- Food Grid -->
+                <div class="grid-4">
+                    <article class="food-card">
+                        <div class="card-img"><img src="images/food/classic-burger.jpg" alt="Classic Chicken Burger"></div>
+                        <div class="card-body">
+                            <h3>Classic Chicken Burger</h3>
+                            <p class="food-restaurant">The Burger House</p>
+                            <p class="food-price">₹179</p>
+                            <p class="food-rating">★★★★☆ 4.3</p>
+                        </div>
+                        <div class="card-actions">
+                            <a href="food-details.html" class="btn btn-secondary btn-sm">View</a>
+                            <a href="cart.html" class="btn btn-primary btn-sm">Add to Cart</a>
+                        </div>
+                    </article>
+
+                    <article class="food-card">
+                        <div class="card-img"><img src="images/food/margherita-pizza.jpg" alt="Margherita Pizza"></div>
+                        <div class="card-body">
+                            <h3>Margherita Pizza</h3>
+                            <p class="food-restaurant">Pizza Palace</p>
+                            <p class="food-price">₹249</p>
+                            <p class="food-rating">★★★★★ 4.6</p>
+                        </div>
+                        <div class="card-actions">
+                            <a href="food-details.html" class="btn btn-secondary btn-sm">View</a>
+                            <a href="cart.html" class="btn btn-primary btn-sm">Add to Cart</a>
+                        </div>
+                    </article>
+
+                    <article class="food-card">
+                        <div class="card-img"><img src="images/food/chicken-biryani.jpg" alt="Chicken Biryani"></div>
+                        <div class="card-body">
+                            <h3>Chicken Biryani</h3>
+                            <p class="food-restaurant">Royal Biryani</p>
+                            <p class="food-price">₹299</p>
+                            <p class="food-rating">★★★★★ 4.7</p>
+                        </div>
+                        <div class="card-actions">
+                            <a href="food-details.html" class="btn btn-secondary btn-sm">View</a>
+                            <a href="cart.html" class="btn btn-primary btn-sm">Add to Cart</a>
+                        </div>
+                    </article>
+
+                    <article class="food-card">
+                        <div class="card-img"><img src="images/food/paneer-tikka.jpg" alt="Paneer Tikka"></div>
+                        <div class="card-body">
+                            <h3>Paneer Tikka</h3>
+                            <p class="food-restaurant">Spice Route</p>
+                            <p class="food-price">₹219</p>
+                            <p class="food-rating">★★★★☆ 4.5</p>
+                        </div>
+                        <div class="card-actions">
+                            <a href="food-details.html" class="btn btn-secondary btn-sm">View</a>
+                            <a href="cart.html" class="btn btn-primary btn-sm">Add to Cart</a>
+                        </div>
+                    </article>
+
+                    <article class="food-card">
+                        <div class="card-img"><img src="images/food/veggie-bowl.jpg" alt="Veggie Bowl"></div>
+                        <div class="card-body">
+                            <h3>Veggie Bowl</h3>
+                            <p class="food-restaurant">Green Bowl</p>
+                            <p class="food-price">₹189</p>
+                            <p class="food-rating">★★★★☆ 4.4</p>
+                        </div>
+                        <div class="card-actions">
+                            <a href="food-details.html" class="btn btn-secondary btn-sm">View</a>
+                            <a href="cart.html" class="btn btn-primary btn-sm">Add to Cart</a>
+                        </div>
+                    </article>
+
+                    <article class="food-card">
+                        <div class="card-img"><img src="images/food/chocolate-brownie.jpg" alt="Chocolate Brownie"></div>
+                        <div class="card-body">
+                            <h3>Chocolate Brownie</h3>
+                            <p class="food-restaurant">Café Aroma</p>
+                            <p class="food-price">₹129</p>
+                            <p class="food-rating">★★★★☆ 4.2</p>
+                        </div>
+                        <div class="card-actions">
+                            <a href="food-details.html" class="btn btn-secondary btn-sm">View</a>
+                            <a href="cart.html" class="btn btn-primary btn-sm">Add to Cart</a>
+                        </div>
+                    </article>
+
+                    <article class="food-card">
+                        <div class="card-img"><img src="images/food/masala-dosa.jpg" alt="Masala Dosa"></div>
+                        <div class="card-body">
+                            <h3>Masala Dosa</h3>
+                            <p class="food-restaurant">Dosa Corner</p>
+                            <p class="food-price">₹149</p>
+                            <p class="food-rating">★★★★☆ 4.3</p>
+                        </div>
+                        <div class="card-actions">
+                            <a href="food-details.html" class="btn btn-secondary btn-sm">View</a>
+                            <a href="cart.html" class="btn btn-primary btn-sm">Add to Cart</a>
+                        </div>
+                    </article>
+
+                    <article class="food-card">
+                        <div class="card-img"><img src="images/food/cold-coffee.jpg" alt="Cold Coffee"></div>
+                        <div class="card-body">
+                            <h3>Cold Coffee</h3>
+                            <p class="food-restaurant">Café Aroma</p>
+                            <p class="food-price">₹99</p>
+                            <p class="food-rating">★★★★☆ 4.2</p>
+                        </div>
+                        <div class="card-actions">
+                            <a href="food-details.html" class="btn btn-secondary btn-sm">View</a>
+                            <a href="cart.html" class="btn btn-primary btn-sm">Add to Cart</a>
+                        </div>
+                    </article>
+
+                    <article class="food-card">
+                        <div class="card-img"><img src="images/food/butter-chicken.jpg" alt="Butter Chicken"></div>
+                        <div class="card-body">
+                            <h3>Butter Chicken</h3>
+                            <p class="food-restaurant">Spice Route</p>
+                            <p class="food-price">₹329</p>
+                            <p class="food-rating">★★★★★ 4.7</p>
+                        </div>
+                        <div class="card-actions">
+                            <a href="food-details.html" class="btn btn-secondary btn-sm">View</a>
+                            <a href="cart.html" class="btn btn-primary btn-sm">Add to Cart</a>
+                        </div>
+                    </article>
+
+                    <article class="food-card">
+                        <div class="card-img"><img src="images/food/pasta.jpg" alt="Penne Arrabbiata Pasta"></div>
+                        <div class="card-body">
+                            <h3>Penne Arrabbiata</h3>
+                            <p class="food-restaurant">Pizza Palace</p>
+                            <p class="food-price">₹269</p>
+                            <p class="food-rating">★★★★☆ 4.5</p>
+                        </div>
+                        <div class="card-actions">
+                            <a href="food-details.html" class="btn btn-secondary btn-sm">View</a>
+                            <a href="cart.html" class="btn btn-primary btn-sm">Add to Cart</a>
+                        </div>
+                    </article>
+
+                    <article class="food-card">
+                        <div class="card-img"><img src="images/food/french-fries.jpg" alt="Crispy French Fries"></div>
+                        <div class="card-body">
+                            <h3>Crispy French Fries</h3>
+                            <p class="food-restaurant">The Burger House</p>
+                            <p class="food-price">₹119</p>
+                            <p class="food-rating">★★★★☆ 4.4</p>
+                        </div>
+                        <div class="card-actions">
+                            <a href="food-details.html" class="btn btn-secondary btn-sm">View</a>
+                            <a href="cart.html" class="btn btn-primary btn-sm">Add to Cart</a>
+                        </div>
+                    </article>
+
+                    <article class="food-card">
+                        <div class="card-img"><img src="images/food/dal-makhani.jpg" alt="Dal Makhani"></div>
+                        <div class="card-body">
+                            <h3>Dal Makhani</h3>
+                            <p class="food-restaurant">Spice Route</p>
+                            <p class="food-price">₹229</p>
+                            <p class="food-rating">★★★★☆ 4.6</p>
+                        </div>
+                        <div class="card-actions">
+                            <a href="food-details.html" class="btn btn-secondary btn-sm">View</a>
+                            <a href="cart.html" class="btn btn-primary btn-sm">Add to Cart</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== Footer ===== -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <div class="logo">🍔 Bite<span>Buddy</span></div>
+                    <p>Your favorite food delivery platform. Discover great restaurants, order your favorite meals, and enjoy fast delivery right to your doorstep.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="restaurants.html">Restaurants</a></li>
+                        <li><a href="food-menu.html">Food Menu</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>My Account</h4>
+                    <ul>
+                        <li><a href="profile.html">Profile</a></li>
+                        <li><a href="my-orders.html">My Orders</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                        <li><a href="login.html">Login</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:support@bitebuddy.com">support@bitebuddy.com</a></li>
+                        <li><a href="tel:+911234567890">+91 12345 67890</a></li>
+                        <li><a href="#">Mumbai, Maharashtra, India</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 BiteBuddy. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Manage Restaurant Partners - Review partner onboarding, commissions, operational status, and hygiene scores on BiteBuddy.">
+    <title>Manage Restaurants — BiteBuddy Admin</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+    <div class="dashboard-layout">
+        <!-- ===== Sidebar ===== -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>⚡ BiteBuddy Admin</h2>
+                <p>Master Platform Control</p>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <div class="nav-section-title">Overview</div>
+                    <a href="index.html"><span class="nav-icon">📈</span> Dashboard</a>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Management</div>
+                    <a href="users.html"><span class="nav-icon">👥</span> Users</a>
+                    <a href="restaurants.html" class="active"><span class="nav-icon">🏪</span> Restaurants</a>
+                    <a href="food-items.html"><span class="nav-icon">🍔</span> Food Items</a>
+                    <a href="orders.html"><span class="nav-icon">📦</span> Orders</a>
+                    <a href="reviews.html"><span class="nav-icon">⭐</span> Reviews</a>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Portals</div>
+                    <a href="../restaurant-dashboard/index.html"><span class="nav-icon">👨‍🍳</span> Restaurant Panel</a>
+                    <a href="../index.html"><span class="nav-icon">🏠</span> Customer Site</a>
+                </div>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="../login.html"><span class="nav-icon">🚪</span> Logout</a>
+            </div>
+        </aside>
+
+        <!-- ===== Main Content ===== -->
+        <div class="dashboard-main">
+            <!-- Header -->
+            <header class="dashboard-header">
+                <div>
+                    <h1>Restaurant Partners Directory</h1>
+                    <p class="text-muted" style="margin-bottom: 0; font-size: 0.875rem;">Manage partner contracts, commissions, hygiene ratings, and storefront statuses</p>
+                </div>
+                <div class="header-right">
+                    <button type="button" class="btn btn-primary btn-sm">+ Onboard Restaurant</button>
+                </div>
+            </header>
+
+            <!-- Content Area -->
+            <div class="dashboard-content">
+                <!-- Filters Bar -->
+                <div class="dashboard-filters">
+                    <span class="filter-label">Filter Partners:</span>
+                    <input type="search" placeholder="Search by restaurant name or location...">
+                    <select>
+                        <option value="">All Cuisines</option>
+                        <option value="indian">North Indian</option>
+                        <option value="burgers">Burgers</option>
+                        <option value="pizza">Pizza & Italian</option>
+                        <option value="biryani">Biryani</option>
+                        <option value="healthy">Healthy & Salads</option>
+                        <option value="cafe">Cafe & Desserts</option>
+                    </select>
+                    <select>
+                        <option value="">All Statuses</option>
+                        <option value="active">Active & Open</option>
+                        <option value="review">Under Review</option>
+                        <option value="paused">Temporarily Paused</option>
+                    </select>
+                </div>
+
+                <!-- Restaurants Table Card -->
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <h3>Partner Outlets (7 records shown)</h3>
+                        <span class="badge badge-primary">Total 348 Restaurants</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive" style="border: none;">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Restaurant</th>
+                                        <th>Owner / Contact</th>
+                                        <th>Cuisines</th>
+                                        <th>Location</th>
+                                        <th>Rating</th>
+                                        <th>Status</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div style="display: flex; align-items: center; gap: 12px;">
+                                                <div class="table-img">
+                                                    <img src="../images/restaurants/spice-route.jpg" alt="Spice Route">
+                                                </div>
+                                                <div>
+                                                    <strong>Spice Route</strong>
+                                                    <div class="text-muted" style="font-size: 0.75rem;">ID: #R101 • Min: ₹150</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Chef Vikram<br><span class="text-muted" style="font-size: 0.75rem;">owner@spiceroute.com</span></td>
+                                        <td>North Indian, Mughlai</td>
+                                        <td>Bandra West, Mumbai</td>
+                                        <td><span style="color: var(--warning); font-weight: 600;">★ 4.5</span></td>
+                                        <td><span class="badge badge-success">Active</span></td>
+                                        <td class="actions">
+                                            <a href="../restaurant-details.html" class="btn btn-secondary btn-sm" title="View Store">View</a>
+                                            <button type="button" class="btn btn-secondary btn-sm">Edit</button>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <div style="display: flex; align-items: center; gap: 12px;">
+                                                <div class="table-img">
+                                                    <img src="../images/restaurants/burger-house.jpg" alt="The Burger House">
+                                                </div>
+                                                <div>
+                                                    <strong>The Burger House</strong>
+                                                    <div class="text-muted" style="font-size: 0.75rem;">ID: #R102 • Min: ₹100</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Mike Chen<br><span class="text-muted" style="font-size: 0.75rem;">mike@burgerhouse.com</span></td>
+                                        <td>Burgers, American</td>
+                                        <td>Khar, Mumbai</td>
+                                        <td><span style="color: var(--warning); font-weight: 600;">★ 4.3</span></td>
+                                        <td><span class="badge badge-success">Active</span></td>
+                                        <td class="actions">
+                                            <a href="../restaurant-details.html" class="btn btn-secondary btn-sm">View</a>
+                                            <button type="button" class="btn btn-secondary btn-sm">Edit</button>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <div style="display: flex; align-items: center; gap: 12px;">
+                                                <div class="table-img">
+                                                    <img src="../images/restaurants/pizza-palace.jpg" alt="Pizza Palace">
+                                                </div>
+                                                <div>
+                                                    <strong>Pizza Palace</strong>
+                                                    <div class="text-muted" style="font-size: 0.75rem;">ID: #R103 • Min: ₹200</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Marco Rossi<br><span class="text-muted" style="font-size: 0.75rem;">marco@pizzapalace.com</span></td>
+                                        <td>Pizza, Italian</td>
+                                        <td>Juhu, Mumbai</td>
+                                        <td><span style="color: var(--warning); font-weight: 600;">★ 4.6</span></td>
+                                        <td><span class="badge badge-success">Active</span></td>
+                                        <td class="actions">
+                                            <a href="../restaurant-details.html" class="btn btn-secondary btn-sm">View</a>
+                                            <button type="button" class="btn btn-secondary btn-sm">Edit</button>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <div style="display: flex; align-items: center; gap: 12px;">
+                                                <div class="table-img">
+                                                    <img src="../images/restaurants/royal-biryani.jpg" alt="Royal Biryani">
+                                                </div>
+                                                <div>
+                                                    <strong>Royal Biryani</strong>
+                                                    <div class="text-muted" style="font-size: 0.75rem;">ID: #R104 • Min: ₹180</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Nawab Zaid<br><span class="text-muted" style="font-size: 0.75rem;">zaid@royalbiryani.com</span></td>
+                                        <td>Biryani, Hyderabadi</td>
+                                        <td>Andheri West, Mumbai</td>
+                                        <td><span style="color: var(--warning); font-weight: 600;">★ 4.7</span></td>
+                                        <td><span class="badge badge-success">Active</span></td>
+                                        <td class="actions">
+                                            <a href="../restaurant-details.html" class="btn btn-secondary btn-sm">View</a>
+                                            <button type="button" class="btn btn-secondary btn-sm">Edit</button>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <div style="display: flex; align-items: center; gap: 12px;">
+                                                <div class="table-img">
+                                                    <img src="../images/restaurants/green-bowl.jpg" alt="Green Bowl">
+                                                </div>
+                                                <div>
+                                                    <strong>Green Bowl</strong>
+                                                    <div class="text-muted" style="font-size: 0.75rem;">ID: #R105 • Min: ₹120</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Ananya Deshmukh<br><span class="text-muted" style="font-size: 0.75rem;">ananya@greenbowl.com</span></td>
+                                        <td>Salads, Healthy</td>
+                                        <td>Santacruz, Mumbai</td>
+                                        <td><span style="color: var(--warning); font-weight: 600;">★ 4.4</span></td>
+                                        <td><span class="badge badge-success">Active</span></td>
+                                        <td class="actions">
+                                            <a href="../restaurant-details.html" class="btn btn-secondary btn-sm">View</a>
+                                            <button type="button" class="btn btn-secondary btn-sm">Edit</button>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <div style="display: flex; align-items: center; gap: 12px;">
+                                                <div class="table-img">
+                                                    <img src="../images/restaurants/cafe-aroma.jpg" alt="Café Aroma">
+                                                </div>
+                                                <div>
+                                                    <strong>Café Aroma</strong>
+                                                    <div class="text-muted" style="font-size: 0.75rem;">ID: #R106 • Min: ₹80</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Rohit Sen<br><span class="text-muted" style="font-size: 0.75rem;">rohit@cafearoma.com</span></td>
+                                        <td>Coffee, Desserts</td>
+                                        <td>Colaba, Mumbai</td>
+                                        <td><span style="color: var(--warning); font-weight: 600;">★ 4.2</span></td>
+                                        <td><span class="badge badge-success">Active</span></td>
+                                        <td class="actions">
+                                            <a href="../restaurant-details.html" class="btn btn-secondary btn-sm">View</a>
+                                            <button type="button" class="btn btn-secondary btn-sm">Edit</button>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <div style="display: flex; align-items: center; gap: 12px;">
+                                                <div class="table-img">
+                                                    <img src="../images/restaurants/wok-express.jpg" alt="Wok Express">
+                                                </div>
+                                                <div>
+                                                    <strong>Wok Express</strong>
+                                                    <div class="text-muted" style="font-size: 0.75rem;">ID: #R107 • Min: ₹160</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Kenji Sato<br><span class="text-muted" style="font-size: 0.75rem;">kenji@wokexpress.com</span></td>
+                                        <td>Asian, Noodles</td>
+                                        <td>Powai, Mumbai</td>
+                                        <td><span style="color: var(--warning); font-weight: 600;">★ 4.1</span></td>
+                                        <td><span class="badge badge-warning">Under Review</span></td>
+                                        <td class="actions">
+                                            <button type="button" class="btn btn-primary btn-sm">Approve</button>
+                                            <button type="button" class="btn btn-secondary btn-sm">Audit</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

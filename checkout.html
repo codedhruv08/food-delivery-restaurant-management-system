@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Secure Checkout - Complete your food order on BiteBuddy. Enter delivery details and select payment method.">
+    <title>Checkout — BiteBuddy</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <!-- ===== Header ===== -->
+    <header class="site-header">
+        <div class="container">
+            <a href="index.html" class="logo">🍔 Bite<span>Buddy</span></a>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="restaurants.html">Restaurants</a>
+                <a href="food-menu.html">Menu</a>
+                <a href="about.html">About</a>
+                <a href="my-orders.html">My Orders</a>
+                <a href="cart.html" class="active">Cart</a>
+                <a href="profile.html">Profile</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="login.html" class="btn btn-secondary btn-sm">Login</a>
+                <a href="register.html" class="btn btn-primary btn-sm">Register</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ===== Page Header ===== -->
+        <section class="page-header">
+            <div class="container">
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a> / <a href="cart.html">Cart</a> / <span>Checkout</span>
+                </div>
+                <h1>Checkout</h1>
+                <p>Complete your delivery address and choose a payment method</p>
+            </div>
+        </section>
+
+        <!-- ===== Checkout Content ===== -->
+        <section class="section">
+            <div class="container">
+                <form action="order-confirmation.html" method="get">
+                    <div class="checkout-layout">
+                        <!-- Left Column: Forms -->
+                        <div>
+                            <!-- Delivery Address -->
+                            <div class="card mb-3">
+                                <h3 class="mb-2">📍 Delivery Address</h3>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="fullName">Full Name</label>
+                                        <input type="text" id="fullName" name="fullName" value="Rahul Sharma" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="phone">Phone Number</label>
+                                        <input type="tel" id="phone" name="phone" value="+91 98765 43210" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email Address</label>
+                                    <input type="email" id="email" name="email" value="rahul.sharma@example.com" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="address">Street Address</label>
+                                    <input type="text" id="address" name="address" value="Flat 402, Sunshine Heights, Linking Road, Bandra West" required>
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="city">City</label>
+                                        <input type="text" id="city" name="city" value="Mumbai" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="state">State</label>
+                                        <input type="text" id="state" name="state" value="Maharashtra" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="pincode">PIN Code</label>
+                                        <input type="text" id="pincode" name="pincode" value="400050" required>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="instructions">Delivery Instructions (Optional)</label>
+                                    <textarea id="instructions" name="instructions" rows="2" placeholder="e.g. Ring the bell twice, leave with security if unavailable"></textarea>
+                                </div>
+                            </div>
+
+                            <!-- Payment Method -->
+                            <div class="card">
+                                <h3 class="mb-2">💳 Payment Method</h3>
+                                <div class="form-group">
+                                    <div class="form-check mb-2">
+                                        <input type="radio" id="payCOD" name="paymentMethod" value="cod" checked>
+                                        <label for="payCOD">
+                                            <strong>Cash on Delivery (COD)</strong> — Pay cash or UPI when your food arrives
+                                        </label>
+                                    </div>
+                                    <div class="form-check mb-2">
+                                        <input type="radio" id="payUPI" name="paymentMethod" value="upi">
+                                        <label for="payUPI">
+                                            <strong>UPI Instant Payment</strong> — Google Pay, PhonePe, Paytm, BHIM
+                                        </label>
+                                    </div>
+                                    <div class="form-check mb-2">
+                                        <input type="radio" id="payCard" name="paymentMethod" value="card">
+                                        <label for="payCard">
+                                            <strong>Credit / Debit Card</strong> — Visa, MasterCard, RuPay
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" id="payNet" name="paymentMethod" value="netbanking">
+                                        <label for="payNet">
+                                            <strong>Net Banking</strong> — All major Indian banks supported
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Right Column: Order Summary -->
+                        <div>
+                            <div class="order-summary">
+                                <h3>Order Summary</h3>
+                                <div class="mb-2">
+                                    <div class="summary-row">
+                                        <span class="label">Paneer Tikka (x1)</span>
+                                        <span class="value">₹219</span>
+                                    </div>
+                                    <div class="summary-row">
+                                        <span class="label">Chicken Biryani (x2)</span>
+                                        <span class="value">₹598</span>
+                                    </div>
+                                    <div class="summary-row">
+                                        <span class="label">Cold Coffee (x1)</span>
+                                        <span class="value">₹99</span>
+                                    </div>
+                                </div>
+                                <div class="summary-row">
+                                    <span class="label">Subtotal</span>
+                                    <span class="value">₹916</span>
+                                </div>
+                                <div class="summary-row">
+                                    <span class="label">Delivery Fee</span>
+                                    <span class="value">₹40</span>
+                                </div>
+                                <div class="summary-row">
+                                    <span class="label">Platform Taxes (5%)</span>
+                                    <span class="value">₹42</span>
+                                </div>
+                                <div class="summary-row discount">
+                                    <span class="label">Coupon Discount (FEAST50)</span>
+                                    <span class="value">-₹50</span>
+                                </div>
+                                <div class="summary-row total">
+                                    <span class="label">Total Amount</span>
+                                    <span class="value">₹868</span>
+                                </div>
+
+                                <div class="mt-3">
+                                    <button type="submit" class="btn btn-primary btn-block btn-lg">Place Order • ₹868</button>
+                                </div>
+
+                                <div class="mt-2 text-center">
+                                    <a href="cart.html" class="btn btn-secondary btn-block btn-sm">← Back to Cart</a>
+                                </div>
+
+                                <div class="mt-3" style="text-align: center; font-size: 0.8125rem; color: var(--muted);">
+                                    🔒 Safe and secure 256-bit SSL encrypted checkout
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== Footer ===== -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <div class="logo">🍔 Bite<span>Buddy</span></div>
+                    <p>Your favorite food delivery platform. Discover great restaurants, order your favorite meals, and enjoy fast delivery right to your doorstep.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="restaurants.html">Restaurants</a></li>
+                        <li><a href="food-menu.html">Food Menu</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>My Account</h4>
+                    <ul>
+                        <li><a href="profile.html">Profile</a></li>
+                        <li><a href="my-orders.html">My Orders</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                        <li><a href="login.html">Login</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:support@bitebuddy.com">support@bitebuddy.com</a></li>
+                        <li><a href="tel:+911234567890">+91 12345 67890</a></li>
+                        <li><a href="#">Mumbai, Maharashtra, India</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 BiteBuddy. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

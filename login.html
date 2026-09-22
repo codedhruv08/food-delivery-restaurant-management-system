@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sign in to BiteBuddy to order food from top restaurants, track your deliveries, or manage your restaurant.">
+    <title>Login — BiteBuddy</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <!-- ===== Header ===== -->
+    <header class="site-header">
+        <div class="container">
+            <a href="index.html" class="logo">🍔 Bite<span>Buddy</span></a>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="restaurants.html">Restaurants</a>
+                <a href="food-menu.html">Menu</a>
+                <a href="about.html">About</a>
+                <a href="my-orders.html">My Orders</a>
+                <a href="cart.html">Cart</a>
+                <a href="profile.html">Profile</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="login.html" class="btn btn-secondary btn-sm active">Login</a>
+                <a href="register.html" class="btn btn-primary btn-sm">Register</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <div class="auth-card">
+                    <h1>Welcome Back</h1>
+                    <p>Enter your credentials to access your account</p>
+
+                    <form action="profile.html" method="get">
+                        <div class="form-group">
+                            <label for="loginEmail">Email Address</label>
+                            <input type="email" id="loginEmail" name="email" placeholder="name@example.com" value="rahul.sharma@example.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+                                <label for="loginPassword" style="margin-bottom: 0;">Password</label>
+                                <a href="#" style="font-size: 0.8125rem; color: var(--primary);">Forgot Password?</a>
+                            </div>
+                            <input type="password" id="loginPassword" name="password" placeholder="••••••••" value="password123" required>
+                        </div>
+
+                        <div class="form-check mb-3">
+                            <input type="checkbox" id="rememberMe" name="remember" checked>
+                            <label for="rememberMe">Remember me on this device</label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-block btn-lg">Sign In</button>
+                    </form>
+
+                    <!-- Quick Demo Credentials Box -->
+                    <div style="margin-top: 24px; padding: 16px; background-color: var(--background); border-radius: var(--radius); border: 1px dashed var(--border); font-size: 0.8125rem;">
+                        <strong style="display: block; margin-bottom: 8px; color: var(--dark);">Quick Role Portals:</strong>
+                        <ul style="margin: 0; padding-left: 18px; color: var(--muted); line-height: 1.6;">
+                            <li><a href="profile.html">Customer Profile</a> (Rahul Sharma)</li>
+                            <li><a href="restaurant-dashboard/index.html">Restaurant Dashboard</a> (Spice Route)</li>
+                            <li><a href="admin-dashboard/index.html">Admin Dashboard</a> (Platform Owner)</li>
+                        </ul>
+                    </div>
+
+                    <div class="auth-footer">
+                        Don't have an account? <a href="register.html">Sign Up</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== Footer ===== -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <div class="logo">🍔 Bite<span>Buddy</span></div>
+                    <p>Your favorite food delivery platform. Discover great restaurants, order your favorite meals, and enjoy fast delivery right to your doorstep.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="restaurants.html">Restaurants</a></li>
+                        <li><a href="food-menu.html">Food Menu</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>My Account</h4>
+                    <ul>
+                        <li><a href="profile.html">Profile</a></li>
+                        <li><a href="my-orders.html">My Orders</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                        <li><a href="login.html">Login</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:support@bitebuddy.com">support@bitebuddy.com</a></li>
+                        <li><a href="tel:+911234567890">+91 12345 67890</a></li>
+                        <li><a href="#">Mumbai, Maharashtra, India</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 BiteBuddy. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

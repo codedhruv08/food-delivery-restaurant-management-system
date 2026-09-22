@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BiteBuddy Admin Portal - Platform overview, aggregate metrics, active orders, and restaurant controls.">
+    <title>Admin Dashboard — BiteBuddy</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+    <div class="dashboard-layout">
+        <!-- ===== Sidebar ===== -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>⚡ BiteBuddy Admin</h2>
+                <p>Master Platform Control</p>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <div class="nav-section-title">Overview</div>
+                    <a href="index.html" class="active"><span class="nav-icon">📈</span> Dashboard</a>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Management</div>
+                    <a href="users.html"><span class="nav-icon">👥</span> Users</a>
+                    <a href="restaurants.html"><span class="nav-icon">🏪</span> Restaurants</a>
+                    <a href="food-items.html"><span class="nav-icon">🍔</span> Food Items</a>
+                    <a href="orders.html"><span class="nav-icon">📦</span> Orders</a>
+                    <a href="reviews.html"><span class="nav-icon">⭐</span> Reviews</a>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Portals</div>
+                    <a href="../restaurant-dashboard/index.html"><span class="nav-icon">👨‍🍳</span> Restaurant Panel</a>
+                    <a href="../index.html"><span class="nav-icon">🏠</span> Customer Site</a>
+                </div>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="../login.html"><span class="nav-icon">🚪</span> Logout</a>
+            </div>
+        </aside>
+
+        <!-- ===== Main Content ===== -->
+        <div class="dashboard-main">
+            <!-- Header -->
+            <header class="dashboard-header">
+                <div>
+                    <h1>Platform Super Admin</h1>
+                    <p class="text-muted" style="margin-bottom: 0; font-size: 0.875rem;">System status: All services operational • Cloud servers healthy</p>
+                </div>
+                <div class="header-right">
+                    <div class="user-info">
+                        <div class="user-avatar">
+                            <img src="../images/avatars/admin-avatar.jpg" alt="Super Admin">
+                        </div>
+                        <div>
+                            <strong>Super Admin</strong>
+                            <div class="text-muted" style="font-size: 0.75rem;">admin@bitebuddy.com</div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Content Area -->
+            <div class="dashboard-content">
+                <!-- 6 Stat Cards Grid -->
+                <div class="stats-grid cols-6 mb-3">
+                    <div class="stat-card">
+                        <div class="stat-icon primary">👥</div>
+                        <div class="stat-value">12,450</div>
+                        <div class="stat-label">Total Users</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon info">🏪</div>
+                        <div class="stat-value">348</div>
+                        <div class="stat-label">Active Restaurants</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon warning">🍔</div>
+                        <div class="stat-value">4,120</div>
+                        <div class="stat-label">Live Food Items</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon primary">📦</div>
+                        <div class="stat-value">89,240</div>
+                        <div class="stat-label">Total Orders</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon success">💰</div>
+                        <div class="stat-value">₹14,25,800</div>
+                        <div class="stat-label">Gross Platform GMV</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon danger">⚡</div>
+                        <div class="stat-value">42</div>
+                        <div class="stat-label">Live Pending Orders</div>
+                    </div>
+                </div>
+
+                <!-- Pure CSS Visual Bar Chart Card -->
+                <div class="dashboard-card mb-3">
+                    <div class="card-header">
+                        <h3>Weekly Order Volumes (Last 7 Days)</h3>
+                        <span class="badge badge-success">+18.4% vs last week</span>
+                    </div>
+                    <div style="padding: 24px;">
+                        <div style="display: flex; align-items: flex-end; justify-content: space-between; height: 160px; padding-bottom: 20px; border-bottom: 1px solid var(--border); gap: 16px;">
+                            <!-- Mon -->
+                            <div style="flex: 1; display: flex; flex-direction: column; align-items: center; height: 100%; justify-content: flex-end;">
+                                <span style="font-size: 0.75rem; color: var(--muted); margin-bottom: 4px;">1,120</span>
+                                <div style="width: 100%; max-width: 48px; height: 50%; background: var(--border-dark); border-radius: 4px 4px 0 0;"></div>
+                                <span style="font-size: 0.75rem; font-weight: 600; margin-top: 8px;">Mon</span>
+                            </div>
+                            <!-- Tue -->
+                            <div style="flex: 1; display: flex; flex-direction: column; align-items: center; height: 100%; justify-content: flex-end;">
+                                <span style="font-size: 0.75rem; color: var(--muted); margin-bottom: 4px;">1,340</span>
+                                <div style="width: 100%; max-width: 48px; height: 60%; background: var(--border-dark); border-radius: 4px 4px 0 0;"></div>
+                                <span style="font-size: 0.75rem; font-weight: 600; margin-top: 8px;">Tue</span>
+                            </div>
+                            <!-- Wed -->
+                            <div style="flex: 1; display: flex; flex-direction: column; align-items: center; height: 100%; justify-content: flex-end;">
+                                <span style="font-size: 0.75rem; color: var(--muted); margin-bottom: 4px;">1,290</span>
+                                <div style="width: 100%; max-width: 48px; height: 58%; background: var(--border-dark); border-radius: 4px 4px 0 0;"></div>
+                                <span style="font-size: 0.75rem; font-weight: 600; margin-top: 8px;">Wed</span>
+                            </div>
+                            <!-- Thu -->
+                            <div style="flex: 1; display: flex; flex-direction: column; align-items: center; height: 100%; justify-content: flex-end;">
+                                <span style="font-size: 0.75rem; color: var(--muted); margin-bottom: 4px;">1,480</span>
+                                <div style="width: 100%; max-width: 48px; height: 68%; background: var(--border-dark); border-radius: 4px 4px 0 0;"></div>
+                                <span style="font-size: 0.75rem; font-weight: 600; margin-top: 8px;">Thu</span>
+                            </div>
+                            <!-- Fri -->
+                            <div style="flex: 1; display: flex; flex-direction: column; align-items: center; height: 100%; justify-content: flex-end;">
+                                <span style="font-size: 0.75rem; color: var(--muted); margin-bottom: 4px;">1,920</span>
+                                <div style="width: 100%; max-width: 48px; height: 86%; background: var(--primary); border-radius: 4px 4px 0 0;"></div>
+                                <span style="font-size: 0.75rem; font-weight: 600; margin-top: 8px;">Fri</span>
+                            </div>
+                            <!-- Sat -->
+                            <div style="flex: 1; display: flex; flex-direction: column; align-items: center; height: 100%; justify-content: flex-end;">
+                                <span style="font-size: 0.75rem; color: var(--primary); font-weight: 700; margin-bottom: 4px;">2,240</span>
+                                <div style="width: 100%; max-width: 48px; height: 100%; background: linear-gradient(to top, var(--primary), var(--secondary)); border-radius: 4px 4px 0 0;"></div>
+                                <span style="font-size: 0.75rem; font-weight: 700; color: var(--primary); margin-top: 8px;">Sat</span>
+                            </div>
+                            <!-- Sun -->
+                            <div style="flex: 1; display: flex; flex-direction: column; align-items: center; height: 100%; justify-content: flex-end;">
+                                <span style="font-size: 0.75rem; color: var(--muted); margin-bottom: 4px;">2,080</span>
+                                <div style="width: 100%; max-width: 48px; height: 92%; background: var(--primary); border-radius: 4px 4px 0 0;"></div>
+                                <span style="font-size: 0.75rem; font-weight: 600; margin-top: 8px;">Sun</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Two Column Dashboard Grid -->
+                <div class="dashboard-grid-2">
+                    <!-- Recent Platform Orders -->
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3>Recent Orders</h3>
+                            <a href="orders.html" class="btn btn-secondary btn-sm">View All →</a>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive" style="border: none;">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Order ID</th>
+                                            <th>Customer</th>
+                                            <th>Restaurant</th>
+                                            <th>Amount</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>#FD10245</strong></td>
+                                            <td>Rahul Sharma</td>
+                                            <td>Spice Route</td>
+                                            <td>₹868</td>
+                                            <td><span class="badge badge-warning">Preparing</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>#FD10244</strong></td>
+                                            <td>Priya Patel</td>
+                                            <td>Pizza Palace</td>
+                                            <td>₹720</td>
+                                            <td><span class="badge badge-info">Ready</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>#FD10240</strong></td>
+                                            <td>Amit Verma</td>
+                                            <td>Green Bowl</td>
+                                            <td>₹340</td>
+                                            <td><span class="badge badge-primary">On Way</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>#FD10238</strong></td>
+                                            <td>Sneha Iyer</td>
+                                            <td>Royal Biryani</td>
+                                            <td>₹598</td>
+                                            <td><span class="badge badge-success">Delivered</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Newly Joined Restaurants -->
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3>Partner Restaurants</h3>
+                            <a href="restaurants.html" class="btn btn-secondary btn-sm">Manage →</a>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive" style="border: none;">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Restaurant</th>
+                                            <th>Cuisine</th>
+                                            <th>Rating</th>
+                                            <th>Status</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>Spice Route</strong></td>
+                                            <td>North Indian</td>
+                                            <td><span style="color: var(--warning);">★ 4.5</span></td>
+                                            <td><span class="badge badge-success">Active</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>The Burger House</strong></td>
+                                            <td>Burgers, Fast Food</td>
+                                            <td><span style="color: var(--warning);">★ 4.3</span></td>
+                                            <td><span class="badge badge-success">Active</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Pizza Palace</strong></td>
+                                            <td>Italian, Pizza</td>
+                                            <td><span style="color: var(--warning);">★ 4.6</span></td>
+                                            <td><span class="badge badge-success">Active</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Royal Biryani</strong></td>
+                                            <td>Hyderabadi</td>
+                                            <td><span style="color: var(--warning);">★ 4.7</span></td>
+                                            <td><span class="badge badge-success">Active</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
