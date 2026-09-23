@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your cart on BiteBuddy. Review items, update quantities, and proceed to checkout.">
+    <title>Cart — BiteBuddy</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <!-- ===== Header ===== -->
+    <header class="site-header">
+        <div class="container">
+            <a href="index.html" class="logo">🍔 Bite<span>Buddy</span></a>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="restaurants.html">Restaurants</a>
+                <a href="food-menu.html">Menu</a>
+                <a href="about.html">About</a>
+                <a href="my-orders.html">My Orders</a>
+                <a href="cart.html" class="active">Cart</a>
+                <a href="profile.html">Profile</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="login.html" class="btn btn-secondary btn-sm">Login</a>
+                <a href="register.html" class="btn btn-primary btn-sm">Register</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ===== Page Header ===== -->
+        <section class="page-header">
+            <div class="container">
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a> / <span>Cart</span>
+                </div>
+                <h1>Your Cart</h1>
+                <p>Review your order and proceed to checkout</p>
+            </div>
+        </section>
+
+        <!-- ===== Cart Content ===== -->
+        <section class="section">
+            <div class="container">
+                <div class="checkout-layout">
+                    <!-- Cart Items -->
+                    <div>
+                        <div class="card">
+                            <h3 class="mb-2">Cart Items (3)</h3>
+
+                            <!-- Item 1 -->
+                            <div class="cart-item">
+                                <div class="cart-item-img">
+                                    <img src="images/food/paneer-tikka.jpg" alt="Paneer Tikka">
+                                </div>
+                                <div class="cart-item-info">
+                                    <h4>Paneer Tikka</h4>
+                                    <p class="cart-item-restaurant">Spice Route</p>
+                                    <p class="cart-item-price">₹219</p>
+                                </div>
+                                <div class="cart-item-qty">
+                                    <label for="qty-1" class="text-small text-muted">Qty</label>
+                                    <select id="qty-1" name="qty-1">
+                                        <option value="1">1</option>
+                                        <option value="2" selected>2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+                                <div class="cart-item-total">₹438</div>
+                                <button class="cart-item-remove" type="button">✕ Remove</button>
+                            </div>
+
+                            <!-- Item 2 -->
+                            <div class="cart-item">
+                                <div class="cart-item-img">
+                                    <img src="images/food/chicken-biryani.jpg" alt="Chicken Biryani">
+                                </div>
+                                <div class="cart-item-info">
+                                    <h4>Chicken Biryani</h4>
+                                    <p class="cart-item-restaurant">Royal Biryani</p>
+                                    <p class="cart-item-price">₹299</p>
+                                </div>
+                                <div class="cart-item-qty">
+                                    <label for="qty-2" class="text-small text-muted">Qty</label>
+                                    <select id="qty-2" name="qty-2">
+                                        <option value="1" selected>1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+                                <div class="cart-item-total">₹299</div>
+                                <button class="cart-item-remove" type="button">✕ Remove</button>
+                            </div>
+
+                            <!-- Item 3 -->
+                            <div class="cart-item">
+                                <div class="cart-item-img">
+                                    <img src="images/food/cold-coffee.jpg" alt="Cold Coffee">
+                                </div>
+                                <div class="cart-item-info">
+                                    <h4>Cold Coffee</h4>
+                                    <p class="cart-item-restaurant">Café Aroma</p>
+                                    <p class="cart-item-price">₹99</p>
+                                </div>
+                                <div class="cart-item-qty">
+                                    <label for="qty-3" class="text-small text-muted">Qty</label>
+                                    <select id="qty-3" name="qty-3">
+                                        <option value="1" selected>1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+                                <div class="cart-item-total">₹99</div>
+                                <button class="cart-item-remove" type="button">✕ Remove</button>
+                            </div>
+                        </div>
+
+                        <div class="mt-2">
+                            <a href="food-menu.html" class="btn btn-secondary">← Continue Shopping</a>
+                        </div>
+                    </div>
+
+                    <!-- Order Summary -->
+                    <div>
+                        <div class="order-summary">
+                            <h3>Order Summary</h3>
+                            <div class="summary-row">
+                                <span class="label">Subtotal</span>
+                                <span class="value">₹836</span>
+                            </div>
+                            <div class="summary-row">
+                                <span class="label">Delivery Fee</span>
+                                <span class="value">₹40</span>
+                            </div>
+                            <div class="summary-row">
+                                <span class="label">Tax (5%)</span>
+                                <span class="value">₹42</span>
+                            </div>
+                            <div class="summary-row discount">
+                                <span class="label">Discount</span>
+                                <span class="value">-₹50</span>
+                            </div>
+                            <div class="summary-row total">
+                                <span class="label">Total</span>
+                                <span class="value">₹868</span>
+                            </div>
+                            <div class="mt-2">
+                                <a href="checkout.html" class="btn btn-primary btn-block btn-lg">Proceed to Checkout</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== Footer ===== -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <div class="logo">🍔 Bite<span>Buddy</span></div>
+                    <p>Your favorite food delivery platform. Discover great restaurants, order your favorite meals, and enjoy fast delivery right to your doorstep.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="restaurants.html">Restaurants</a></li>
+                        <li><a href="food-menu.html">Food Menu</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>My Account</h4>
+                    <ul>
+                        <li><a href="profile.html">Profile</a></li>
+                        <li><a href="my-orders.html">My Orders</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                        <li><a href="login.html">Login</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:support@bitebuddy.com">support@bitebuddy.com</a></li>
+                        <li><a href="tel:+911234567890">+91 12345 67890</a></li>
+                        <li><a href="#">Mumbai, Maharashtra, India</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 BiteBuddy. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

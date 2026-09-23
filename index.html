@@ -1,125 +1,358 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Foodie - Food Delivery</title>
-
-    <link rel="stylesheet" href="css/home.css">
+    <meta name="description" content="BiteBuddy - Order delicious food from the best restaurants near you. Fast delivery, trusted restaurants, and secure checkout.">
+    <title>BiteBuddy — Delicious Food, Delivered to Your Door</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
-
 <body>
 
-    <!-- Navbar -->
-    <header>
-        <nav class="navbar">
-
-            <div class="logo">
-                𝐵𝒾𝓉𝑒𝐵𝓊𝒹𝒹𝓎
+    <!-- ===== Header ===== -->
+    <header class="site-header">
+        <div class="container">
+            <a href="index.html" class="logo">🍔 Bite<span>Buddy</span></a>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="restaurants.html">Restaurants</a>
+                <a href="food-menu.html">Menu</a>
+                <a href="about.html">About</a>
+                <a href="my-orders.html">My Orders</a>
+                <a href="cart.html">Cart</a>
+                <a href="profile.html">Profile</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="login.html" class="btn btn-secondary btn-sm">Login</a>
+                <a href="register.html" class="btn btn-primary btn-sm">Register</a>
             </div>
-
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#">Restaurants</a></li>
-                <li><a href="#">Menu</a></li>
-                <li><a href="#">Cart</a></li>
-                <li><a href="#">Login</a></li>
-            </ul>
-
-        </nav>
+        </div>
     </header>
 
-
-    <!-- Hero Section -->
     <main>
-
+        <!-- ===== Hero Section ===== -->
         <section class="hero">
-
-            <div class="hero-content">
-                <h1>Delicious Food, Delivered Fast</h1>
-
-                <p>
-                    Order your favourite food from the best restaurants
-                    near you.
-                </p>
-
-                <a href="#" class="btn">Order Now</a>
+            <div class="container">
+                <h1>Delicious Food, Delivered to Your Door</h1>
+                <p>Discover great restaurants and order your favorite meals with ease. Fast delivery, great taste, every time.</p>
+                <form class="hero-search" action="restaurants.html" method="get">
+                    <input type="text" placeholder="Search for restaurants, cuisines, or dishes..." aria-label="Search">
+                    <button type="submit">Search</button>
+                </form>
+                <div class="hero-actions">
+                    <a href="restaurants.html" class="btn btn-primary btn-lg">Browse Restaurants</a>
+                    <a href="food-menu.html" class="btn btn-secondary btn-lg">Explore Menu</a>
+                </div>
             </div>
-
         </section>
 
-
-        <!-- Popular Restaurants -->
-        <section class="restaurants">
-
-            <h2>Popular Restaurants</h2>
-
-            <div class="restaurant-container">
-
-                <div class="restaurant-card">
-                    <h3>Food Palace</h3>
-                    <p>Indian • Fast Food</p>
-                    <a href="#">View Menu</a>
+        <!-- ===== Popular Restaurants ===== -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Popular Restaurants</h2>
+                    <p>Discover top-rated restaurants loved by food enthusiasts near you</p>
                 </div>
+                <div class="grid-3">
+                    <!-- Restaurant 1 -->
+                    <article class="restaurant-card">
+                        <div class="card-img">
+                            <img src="images/restaurants/spice-route.jpg" alt="Spice Route">
+                        </div>
+                        <div class="card-body">
+                            <h3>Spice Route</h3>
+                            <div class="card-meta">
+                                <span>North Indian, Mughlai</span>
+                                <span class="rating">★ 4.5</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <span>🕐 30–40 min</span>
+                            <a href="restaurant-details.html" class="btn btn-primary btn-sm">View Restaurant</a>
+                        </div>
+                    </article>
 
-                <div class="restaurant-card">
-                    <h3>Pizza House</h3>
-                    <p>Pizza • Italian</p>
-                    <a href="#">View Menu</a>
+                    <!-- Restaurant 2 -->
+                    <article class="restaurant-card">
+                        <div class="card-img">
+                            <img src="images/restaurants/burger-house.jpg" alt="The Burger House">
+                        </div>
+                        <div class="card-body">
+                            <h3>The Burger House</h3>
+                            <div class="card-meta">
+                                <span>Burgers, American</span>
+                                <span class="rating">★ 4.3</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <span>🕐 20–30 min</span>
+                            <a href="restaurant-details.html" class="btn btn-primary btn-sm">View Restaurant</a>
+                        </div>
+                    </article>
+
+                    <!-- Restaurant 3 -->
+                    <article class="restaurant-card">
+                        <div class="card-img">
+                            <img src="images/restaurants/pizza-palace.jpg" alt="Pizza Palace">
+                        </div>
+                        <div class="card-body">
+                            <h3>Pizza Palace</h3>
+                            <div class="card-meta">
+                                <span>Pizza, Italian</span>
+                                <span class="rating">★ 4.6</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <span>🕐 25–35 min</span>
+                            <a href="restaurant-details.html" class="btn btn-primary btn-sm">View Restaurant</a>
+                        </div>
+                    </article>
+
+                    <!-- Restaurant 4 -->
+                    <article class="restaurant-card">
+                        <div class="card-img">
+                            <img src="images/restaurants/royal-biryani.jpg" alt="Royal Biryani">
+                        </div>
+                        <div class="card-body">
+                            <h3>Royal Biryani</h3>
+                            <div class="card-meta">
+                                <span>Biryani, Hyderabadi</span>
+                                <span class="rating">★ 4.7</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <span>🕐 35–45 min</span>
+                            <a href="restaurant-details.html" class="btn btn-primary btn-sm">View Restaurant</a>
+                        </div>
+                    </article>
+
+                    <!-- Restaurant 5 -->
+                    <article class="restaurant-card">
+                        <div class="card-img">
+                            <img src="images/restaurants/green-bowl.jpg" alt="Green Bowl">
+                        </div>
+                        <div class="card-body">
+                            <h3>Green Bowl</h3>
+                            <div class="card-meta">
+                                <span>Salads, Healthy</span>
+                                <span class="rating">★ 4.4</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <span>🕐 20–25 min</span>
+                            <a href="restaurant-details.html" class="btn btn-primary btn-sm">View Restaurant</a>
+                        </div>
+                    </article>
+
+                    <!-- Restaurant 6 -->
+                    <article class="restaurant-card">
+                        <div class="card-img">
+                            <img src="images/restaurants/cafe-aroma.jpg" alt="Café Aroma">
+                        </div>
+                        <div class="card-body">
+                            <h3>Café Aroma</h3>
+                            <div class="card-meta">
+                                <span>Coffee, Desserts</span>
+                                <span class="rating">★ 4.2</span>
+                            </div>
+                        </div>
+                        <div class="card-footer">
+                            <span>🕐 15–20 min</span>
+                            <a href="restaurant-details.html" class="btn btn-primary btn-sm">View Restaurant</a>
+                        </div>
+                    </article>
                 </div>
-
-                <div class="restaurant-card">
-                    <h3>Burger Point</h3>
-                    <p>Burgers • Fast Food</p>
-                    <a href="#">View Menu</a>
-                </div>
-
             </div>
-
         </section>
 
-
-        <!-- Popular Food -->
-        <section class="food">
-
-            <h2>Popular Food</h2>
-
-            <div class="food-container">
-
-                <div class="food-card">
-                    <h3>Pizza</h3>
-                    <p>₹199</p>
-                    <a href="#">Order Now</a>
+        <!-- ===== Popular Food ===== -->
+        <section class="section" style="background-color: var(--white);">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Popular Food</h2>
+                    <p>Most ordered dishes that our customers absolutely love</p>
                 </div>
+                <div class="grid-4">
+                    <!-- Food 1 -->
+                    <article class="food-card">
+                        <div class="card-img">
+                            <img src="images/food/classic-burger.jpg" alt="Classic Chicken Burger">
+                        </div>
+                        <div class="card-body">
+                            <h3>Classic Chicken Burger</h3>
+                            <p class="food-restaurant">The Burger House</p>
+                            <p class="food-price">₹179</p>
+                            <p class="food-rating">★★★★☆ 4.3</p>
+                        </div>
+                        <div class="card-actions">
+                            <a href="food-details.html" class="btn btn-secondary btn-sm">View</a>
+                            <a href="cart.html" class="btn btn-primary btn-sm">Add to Cart</a>
+                        </div>
+                    </article>
 
-                <div class="food-card">
-                    <h3>Burger</h3>
-                    <p>₹149</p>
-                    <a href="#">Order Now</a>
+                    <!-- Food 2 -->
+                    <article class="food-card">
+                        <div class="card-img">
+                            <img src="images/food/margherita-pizza.jpg" alt="Margherita Pizza">
+                        </div>
+                        <div class="card-body">
+                            <h3>Margherita Pizza</h3>
+                            <p class="food-restaurant">Pizza Palace</p>
+                            <p class="food-price">₹249</p>
+                            <p class="food-rating">★★★★★ 4.6</p>
+                        </div>
+                        <div class="card-actions">
+                            <a href="food-details.html" class="btn btn-secondary btn-sm">View</a>
+                            <a href="cart.html" class="btn btn-primary btn-sm">Add to Cart</a>
+                        </div>
+                    </article>
+
+                    <!-- Food 3 -->
+                    <article class="food-card">
+                        <div class="card-img">
+                            <img src="images/food/chicken-biryani.jpg" alt="Chicken Biryani">
+                        </div>
+                        <div class="card-body">
+                            <h3>Chicken Biryani</h3>
+                            <p class="food-restaurant">Royal Biryani</p>
+                            <p class="food-price">₹299</p>
+                            <p class="food-rating">★★★★★ 4.7</p>
+                        </div>
+                        <div class="card-actions">
+                            <a href="food-details.html" class="btn btn-secondary btn-sm">View</a>
+                            <a href="cart.html" class="btn btn-primary btn-sm">Add to Cart</a>
+                        </div>
+                    </article>
+
+                    <!-- Food 4 -->
+                    <article class="food-card">
+                        <div class="card-img">
+                            <img src="images/food/paneer-tikka.jpg" alt="Paneer Tikka">
+                        </div>
+                        <div class="card-body">
+                            <h3>Paneer Tikka</h3>
+                            <p class="food-restaurant">Spice Route</p>
+                            <p class="food-price">₹219</p>
+                            <p class="food-rating">★★★★☆ 4.5</p>
+                        </div>
+                        <div class="card-actions">
+                            <a href="food-details.html" class="btn btn-secondary btn-sm">View</a>
+                            <a href="cart.html" class="btn btn-primary btn-sm">Add to Cart</a>
+                        </div>
+                    </article>
+
+                    <!-- Food 5 -->
+                    <article class="food-card">
+                        <div class="card-img">
+                            <img src="images/food/veggie-bowl.jpg" alt="Veggie Bowl">
+                        </div>
+                        <div class="card-body">
+                            <h3>Veggie Bowl</h3>
+                            <p class="food-restaurant">Green Bowl</p>
+                            <p class="food-price">₹189</p>
+                            <p class="food-rating">★★★★☆ 4.4</p>
+                        </div>
+                        <div class="card-actions">
+                            <a href="food-details.html" class="btn btn-secondary btn-sm">View</a>
+                            <a href="cart.html" class="btn btn-primary btn-sm">Add to Cart</a>
+                        </div>
+                    </article>
+
+                    <!-- Food 6 -->
+                    <article class="food-card">
+                        <div class="card-img">
+                            <img src="images/food/chocolate-brownie.jpg" alt="Chocolate Brownie">
+                        </div>
+                        <div class="card-body">
+                            <h3>Chocolate Brownie</h3>
+                            <p class="food-restaurant">Café Aroma</p>
+                            <p class="food-price">₹129</p>
+                            <p class="food-rating">★★★★☆ 4.2</p>
+                        </div>
+                        <div class="card-actions">
+                            <a href="food-details.html" class="btn btn-secondary btn-sm">View</a>
+                            <a href="cart.html" class="btn btn-primary btn-sm">Add to Cart</a>
+                        </div>
+                    </article>
                 </div>
-
-                <div class="food-card">
-                    <h3>Biryani</h3>
-                    <p>₹249</p>
-                    <a href="#">Order Now</a>
-                </div>
-
             </div>
-
         </section>
 
+        <!-- ===== Why Choose Us ===== -->
+        <section class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Why Choose BiteBuddy?</h2>
+                    <p>We make food ordering simple, fast, and reliable</p>
+                </div>
+                <div class="grid-4">
+                    <div class="feature-card">
+                        <div class="feature-icon">🚀</div>
+                        <h3>Fast Delivery</h3>
+                        <p>Get your food delivered in 30 minutes or less with real-time tracking.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">⭐</div>
+                        <h3>Trusted Restaurants</h3>
+                        <p>Only verified and top-rated restaurants are listed on our platform.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🔒</div>
+                        <h3>Secure Checkout</h3>
+                        <p>Your payments are safe with our encrypted and secure checkout process.</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🍽️</div>
+                        <h3>Quality Food</h3>
+                        <p>Fresh ingredients and quality standards maintained by all our partner restaurants.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
-
-    <!-- Footer -->
-    <footer>
-
-        <p>© 2026 Foodie. All Rights Reserved.</p>
-
+    <!-- ===== Footer ===== -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <div class="logo">🍔 Bite<span>Buddy</span></div>
+                    <p>Your favorite food delivery platform. Discover great restaurants, order your favorite meals, and enjoy fast delivery right to your doorstep.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="restaurants.html">Restaurants</a></li>
+                        <li><a href="food-menu.html">Food Menu</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>My Account</h4>
+                    <ul>
+                        <li><a href="profile.html">Profile</a></li>
+                        <li><a href="my-orders.html">My Orders</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                        <li><a href="login.html">Login</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:support@bitebuddy.com">support@bitebuddy.com</a></li>
+                        <li><a href="tel:+911234567890">+91 12345 67890</a></li>
+                        <li><a href="#">Mumbai, Maharashtra, India</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 BiteBuddy. All Rights Reserved.</p>
+            </div>
+        </div>
     </footer>
 
 </body>
-
 </html>

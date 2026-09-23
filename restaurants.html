@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse restaurants on BiteBuddy. Filter by cuisine, rating, and delivery time to find the perfect restaurant.">
+    <title>Restaurants — BiteBuddy</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+    <!-- ===== Header ===== -->
+    <header class="site-header">
+        <div class="container">
+            <a href="index.html" class="logo">🍔 Bite<span>Buddy</span></a>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="restaurants.html" class="active">Restaurants</a>
+                <a href="food-menu.html">Menu</a>
+                <a href="about.html">About</a>
+                <a href="my-orders.html">My Orders</a>
+                <a href="cart.html">Cart</a>
+                <a href="profile.html">Profile</a>
+            </nav>
+            <div class="nav-actions">
+                <a href="login.html" class="btn btn-secondary btn-sm">Login</a>
+                <a href="register.html" class="btn btn-primary btn-sm">Register</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ===== Page Header ===== -->
+        <section class="page-header">
+            <div class="container">
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a> / <span>Restaurants</span>
+                </div>
+                <h1>Restaurants</h1>
+                <p>Discover and order from the best restaurants in your area</p>
+            </div>
+        </section>
+
+        <!-- ===== Content ===== -->
+        <section class="section">
+            <div class="container">
+                <div class="content-with-sidebar">
+                    <!-- Sidebar Filters -->
+                    <aside class="filter-sidebar">
+                        <h3>Filters</h3>
+
+                        <div class="filter-group">
+                            <h4>Cuisine</h4>
+                            <div class="form-check">
+                                <input type="checkbox" id="cuisine-indian" name="cuisine">
+                                <label for="cuisine-indian">North Indian</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" id="cuisine-south" name="cuisine">
+                                <label for="cuisine-south">South Indian</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" id="cuisine-italian" name="cuisine">
+                                <label for="cuisine-italian">Italian</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" id="cuisine-american" name="cuisine">
+                                <label for="cuisine-american">American</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" id="cuisine-chinese" name="cuisine">
+                                <label for="cuisine-chinese">Chinese</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" id="cuisine-healthy" name="cuisine">
+                                <label for="cuisine-healthy">Healthy</label>
+                            </div>
+                        </div>
+
+                        <div class="filter-group">
+                            <h4>Rating</h4>
+                            <select aria-label="Filter by rating">
+                                <option value="">All Ratings</option>
+                                <option value="4.5">4.5 &amp; above</option>
+                                <option value="4.0">4.0 &amp; above</option>
+                                <option value="3.5">3.5 &amp; above</option>
+                                <option value="3.0">3.0 &amp; above</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-group">
+                            <h4>Delivery Time</h4>
+                            <select aria-label="Filter by delivery time">
+                                <option value="">Any Time</option>
+                                <option value="20">Under 20 min</option>
+                                <option value="30">Under 30 min</option>
+                                <option value="45">Under 45 min</option>
+                            </select>
+                        </div>
+
+                        <div class="filter-group">
+                            <h4>Price Range</h4>
+                            <select aria-label="Filter by price range">
+                                <option value="">All Prices</option>
+                                <option value="low">₹ — Budget Friendly</option>
+                                <option value="mid">₹₹ — Moderate</option>
+                                <option value="high">₹₹₹ — Premium</option>
+                            </select>
+                        </div>
+
+                        <button class="btn btn-primary btn-block">Apply Filters</button>
+                    </aside>
+
+                    <!-- Restaurant Grid -->
+                    <div>
+                        <div class="grid-3" style="grid-template-columns: repeat(2, 1fr);">
+                            <!-- Restaurant 1 -->
+                            <article class="restaurant-card">
+                                <div class="card-img">
+                                    <img src="images/restaurants/spice-route.jpg" alt="Spice Route">
+                                </div>
+                                <div class="card-body">
+                                    <h3>Spice Route</h3>
+                                    <div class="card-meta">
+                                        <span>North Indian, Mughlai</span>
+                                        <span class="rating">★ 4.5</span>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <span>🕐 30–40 min · Min ₹150</span>
+                                    <a href="restaurant-details.html" class="btn btn-primary btn-sm">View Menu</a>
+                                </div>
+                            </article>
+
+                            <!-- Restaurant 2 -->
+                            <article class="restaurant-card">
+                                <div class="card-img">
+                                    <img src="images/restaurants/burger-house.jpg" alt="The Burger House">
+                                </div>
+                                <div class="card-body">
+                                    <h3>The Burger House</h3>
+                                    <div class="card-meta">
+                                        <span>Burgers, American</span>
+                                        <span class="rating">★ 4.3</span>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <span>🕐 20–30 min · Min ₹100</span>
+                                    <a href="restaurant-details.html" class="btn btn-primary btn-sm">View Menu</a>
+                                </div>
+                            </article>
+
+                            <!-- Restaurant 3 -->
+                            <article class="restaurant-card">
+                                <div class="card-img">
+                                    <img src="images/restaurants/pizza-palace.jpg" alt="Pizza Palace">
+                                </div>
+                                <div class="card-body">
+                                    <h3>Pizza Palace</h3>
+                                    <div class="card-meta">
+                                        <span>Pizza, Italian</span>
+                                        <span class="rating">★ 4.6</span>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <span>🕐 25–35 min · Min ₹200</span>
+                                    <a href="restaurant-details.html" class="btn btn-primary btn-sm">View Menu</a>
+                                </div>
+                            </article>
+
+                            <!-- Restaurant 4 -->
+                            <article class="restaurant-card">
+                                <div class="card-img">
+                                    <img src="images/restaurants/royal-biryani.jpg" alt="Royal Biryani">
+                                </div>
+                                <div class="card-body">
+                                    <h3>Royal Biryani</h3>
+                                    <div class="card-meta">
+                                        <span>Biryani, Hyderabadi</span>
+                                        <span class="rating">★ 4.7</span>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <span>🕐 35–45 min · Min ₹180</span>
+                                    <a href="restaurant-details.html" class="btn btn-primary btn-sm">View Menu</a>
+                                </div>
+                            </article>
+
+                            <!-- Restaurant 5 -->
+                            <article class="restaurant-card">
+                                <div class="card-img">
+                                    <img src="images/restaurants/green-bowl.jpg" alt="Green Bowl">
+                                </div>
+                                <div class="card-body">
+                                    <h3>Green Bowl</h3>
+                                    <div class="card-meta">
+                                        <span>Salads, Healthy</span>
+                                        <span class="rating">★ 4.4</span>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <span>🕐 20–25 min · Min ₹120</span>
+                                    <a href="restaurant-details.html" class="btn btn-primary btn-sm">View Menu</a>
+                                </div>
+                            </article>
+
+                            <!-- Restaurant 6 -->
+                            <article class="restaurant-card">
+                                <div class="card-img">
+                                    <img src="images/restaurants/cafe-aroma.jpg" alt="Café Aroma">
+                                </div>
+                                <div class="card-body">
+                                    <h3>Café Aroma</h3>
+                                    <div class="card-meta">
+                                        <span>Coffee, Desserts</span>
+                                        <span class="rating">★ 4.2</span>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <span>🕐 15–20 min · Min ₹80</span>
+                                    <a href="restaurant-details.html" class="btn btn-primary btn-sm">View Menu</a>
+                                </div>
+                            </article>
+
+                            <!-- Restaurant 7 -->
+                            <article class="restaurant-card">
+                                <div class="card-img">
+                                    <img src="images/restaurants/wok-express.jpg" alt="Wok Express">
+                                </div>
+                                <div class="card-body">
+                                    <h3>Wok Express</h3>
+                                    <div class="card-meta">
+                                        <span>Chinese, Asian</span>
+                                        <span class="rating">★ 4.1</span>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <span>🕐 25–35 min · Min ₹150</span>
+                                    <a href="restaurant-details.html" class="btn btn-primary btn-sm">View Menu</a>
+                                </div>
+                            </article>
+
+                            <!-- Restaurant 8 -->
+                            <article class="restaurant-card">
+                                <div class="card-img">
+                                    <img src="images/food/masala-dosa.jpg" alt="Dosa Corner">
+                                </div>
+                                <div class="card-body">
+                                    <h3>Dosa Corner</h3>
+                                    <div class="card-meta">
+                                        <span>South Indian</span>
+                                        <span class="rating">★ 4.3</span>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <span>🕐 20–30 min · Min ₹100</span>
+                                    <a href="restaurant-details.html" class="btn btn-primary btn-sm">View Menu</a>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ===== Footer ===== -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <div class="logo">🍔 Bite<span>Buddy</span></div>
+                    <p>Your favorite food delivery platform. Discover great restaurants, order your favorite meals, and enjoy fast delivery right to your doorstep.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="restaurants.html">Restaurants</a></li>
+                        <li><a href="food-menu.html">Food Menu</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>My Account</h4>
+                    <ul>
+                        <li><a href="profile.html">Profile</a></li>
+                        <li><a href="my-orders.html">My Orders</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                        <li><a href="login.html">Login</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:support@bitebuddy.com">support@bitebuddy.com</a></li>
+                        <li><a href="tel:+911234567890">+91 12345 67890</a></li>
+                        <li><a href="#">Mumbai, Maharashtra, India</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 BiteBuddy. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

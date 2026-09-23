@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Restaurant Management Dashboard - Spice Route. View order stats, revenue, and live kitchen orders.">
+    <title>Restaurant Dashboard — Spice Route</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+    <div class="dashboard-layout">
+        <!-- ===== Sidebar ===== -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>🏪 Spice Route</h2>
+                <p>Restaurant Partner Portal</p>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <div class="nav-section-title">Main Menu</div>
+                    <a href="index.html" class="active"><span class="nav-icon">📊</span> Dashboard</a>
+                    <a href="manage-food.html"><span class="nav-icon">🍲</span> Manage Food</a>
+                    <a href="add-food.html"><span class="nav-icon">➕</span> Add Food Item</a>
+                    <a href="orders.html"><span class="nav-icon">📦</span> Orders <span class="badge badge-warning" style="margin-left: auto;">3 New</span></a>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Customer Store</div>
+                    <a href="../restaurant-details.html"><span class="nav-icon">👁️</span> View Live Menu</a>
+                    <a href="../index.html"><span class="nav-icon">🏠</span> Customer Home</a>
+                </div>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="../login.html"><span class="nav-icon">🚪</span> Logout</a>
+            </div>
+        </aside>
+
+        <!-- ===== Main Content ===== -->
+        <div class="dashboard-main">
+            <!-- Header -->
+            <header class="dashboard-header">
+                <div>
+                    <h1>Dashboard Overview</h1>
+                    <p class="text-muted" style="margin-bottom: 0; font-size: 0.875rem;">Welcome back, Chef Vikram! Here is your kitchen summary today.</p>
+                </div>
+                <div class="header-right">
+                    <span class="badge badge-success">● Accepting Orders</span>
+                    <div class="user-info">
+                        <div class="user-avatar">
+                            <img src="../images/avatars/chef-vikram.jpg" alt="Chef Vikram">
+                        </div>
+                        <div>
+                            <strong>Spice Route</strong>
+                            <div class="text-muted" style="font-size: 0.75rem;">Partner ID: #R102</div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Content Area -->
+            <div class="dashboard-content">
+                <!-- Stat Cards Grid -->
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon primary">📦</div>
+                        <div class="stat-value">156</div>
+                        <div class="stat-label">Total Orders</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon info">⚡</div>
+                        <div class="stat-value">12</div>
+                        <div class="stat-label">Today's Orders</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon warning">🍲</div>
+                        <div class="stat-value">48</div>
+                        <div class="stat-label">Active Food Items</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon success">💰</div>
+                        <div class="stat-value">₹45,600</div>
+                        <div class="stat-label">Monthly Revenue</div>
+                    </div>
+                </div>
+
+                <!-- Recent Orders & Top Items -->
+                <div class="dashboard-card mb-3">
+                    <div class="card-header">
+                        <h3>Recent Incoming Orders</h3>
+                        <a href="orders.html" class="btn btn-secondary btn-sm">View All Orders →</a>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive" style="border: none;">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Order ID</th>
+                                        <th>Customer</th>
+                                        <th>Items Ordered</th>
+                                        <th>Amount</th>
+                                        <th>Time</th>
+                                        <th>Status</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>#FD10245</strong></td>
+                                        <td>Rahul Sharma</td>
+                                        <td>1× Paneer Tikka</td>
+                                        <td>₹219</td>
+                                        <td>10 mins ago</td>
+                                        <td><span class="badge badge-warning">Preparing</span></td>
+                                        <td class="actions">
+                                            <a href="orders.html" class="btn btn-primary btn-sm">Update Status</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>#FD10244</strong></td>
+                                        <td>Priya Patel</td>
+                                        <td>2× Butter Chicken, 4× Garlic Naan</td>
+                                        <td>₹720</td>
+                                        <td>25 mins ago</td>
+                                        <td><span class="badge badge-info">Ready for Pickup</span></td>
+                                        <td class="actions">
+                                            <a href="orders.html" class="btn btn-secondary btn-sm">View</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>#FD10240</strong></td>
+                                        <td>Amit Verma</td>
+                                        <td>1× Dal Makhani, 2× Jeera Rice</td>
+                                        <td>₹340</td>
+                                        <td>45 mins ago</td>
+                                        <td><span class="badge badge-success">Out for Delivery</span></td>
+                                        <td class="actions">
+                                            <a href="orders.html" class="btn btn-secondary btn-sm">View</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>#FD10238</strong></td>
+                                        <td>Sneha Iyer</td>
+                                        <td>1× Paneer Tikka, 1× Masala Kulcha</td>
+                                        <td>₹279</td>
+                                        <td>1 hour ago</td>
+                                        <td><span class="badge badge-success">Delivered</span></td>
+                                        <td class="actions">
+                                            <a href="orders.html" class="btn btn-secondary btn-sm">View</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td><strong>#FD10232</strong></td>
+                                        <td>Karan Malhotra</td>
+                                        <td>2× Chicken Biryani Special</td>
+                                        <td>₹598</td>
+                                        <td>2 hours ago</td>
+                                        <td><span class="badge badge-success">Delivered</span></td>
+                                        <td class="actions">
+                                            <a href="orders.html" class="btn btn-secondary btn-sm">View</a>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2 Column Section: Best Selling Items & Quick Actions -->
+                <div class="dashboard-grid-2">
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3>Best Selling Dishes</h3>
+                            <a href="manage-food.html" class="btn btn-secondary btn-sm">Manage</a>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive" style="border: none;">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Dish</th>
+                                            <th>Category</th>
+                                            <th>Price</th>
+                                            <th>Orders</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>Paneer Tikka</strong></td>
+                                            <td>Starters</td>
+                                            <td>₹219</td>
+                                            <td><span class="badge badge-success">142 orders</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Butter Chicken</strong></td>
+                                            <td>Main Course</td>
+                                            <td>₹329</td>
+                                            <td><span class="badge badge-success">118 orders</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Dal Makhani</strong></td>
+                                            <td>Main Course</td>
+                                            <td>₹229</td>
+                                            <td><span class="badge badge-success">95 orders</span></td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Garlic Naan</strong></td>
+                                            <td>Breads</td>
+                                            <td>₹59</td>
+                                            <td><span class="badge badge-success">210 orders</span></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h3>Kitchen Controls & Actions</h3>
+                        </div>
+                        <div style="padding: 20px;">
+                            <div class="alert alert-info mb-2">
+                                🔔 <strong>Peak Dining Hours:</strong> You currently have 3 live orders in the queue. Expected kitchen load is normal.
+                            </div>
+                            <div style="display: flex; flex-direction: column; gap: 10px;">
+                                <a href="add-food.html" class="btn btn-primary btn-block">➕ Add New Food Item</a>
+                                <a href="manage-food.html" class="btn btn-secondary btn-block">📋 Update Dish Availability & Prices</a>
+                                <a href="orders.html" class="btn btn-secondary btn-block">⚡ Open Live Kitchen Order Screen</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

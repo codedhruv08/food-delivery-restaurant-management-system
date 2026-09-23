@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Restaurant Orders Management - Process live kitchen orders, update statuses, and review deliveries for Spice Route.">
+    <title>Kitchen Orders — Spice Route</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+    <div class="dashboard-layout">
+        <!-- ===== Sidebar ===== -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>🏪 Spice Route</h2>
+                <p>Restaurant Partner Portal</p>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <div class="nav-section-title">Main Menu</div>
+                    <a href="index.html"><span class="nav-icon">📊</span> Dashboard</a>
+                    <a href="manage-food.html"><span class="nav-icon">🍲</span> Manage Food</a>
+                    <a href="add-food.html"><span class="nav-icon">➕</span> Add Food Item</a>
+                    <a href="orders.html" class="active"><span class="nav-icon">📦</span> Orders <span class="badge badge-warning" style="margin-left: auto;">3 New</span></a>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Customer Store</div>
+                    <a href="../restaurant-details.html"><span class="nav-icon">👁️</span> View Live Menu</a>
+                    <a href="../index.html"><span class="nav-icon">🏠</span> Customer Home</a>
+                </div>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="../login.html"><span class="nav-icon">🚪</span> Logout</a>
+            </div>
+        </aside>
+
+        <!-- ===== Main Content ===== -->
+        <div class="dashboard-main">
+            <!-- Header -->
+            <header class="dashboard-header">
+                <div>
+                    <h1>Kitchen Orders Management</h1>
+                    <p class="text-muted" style="margin-bottom: 0; font-size: 0.875rem;">Manage real-time incoming delivery requests and prepare items efficiently</p>
+                </div>
+                <div class="header-right">
+                    <span class="badge badge-success">● Kitchen Active</span>
+                    <a href="orders.html" class="btn btn-secondary btn-sm">🔄 Refresh Feed</a>
+                </div>
+            </header>
+
+            <!-- Content Area -->
+            <div class="dashboard-content">
+                <!-- Filters Bar -->
+                <div class="dashboard-filters">
+                    <span class="filter-label">Filter Orders:</span>
+                    <input type="search" placeholder="Search order ID or customer name...">
+                    <select>
+                        <option value="">All Statuses</option>
+                        <option value="pending">Pending Acceptance</option>
+                        <option value="preparing" selected>Preparing in Kitchen</option>
+                        <option value="ready">Ready for Pickup</option>
+                        <option value="out">Out for Delivery</option>
+                        <option value="delivered">Delivered</option>
+                        <option value="cancelled">Cancelled</option>
+                    </select>
+                    <input type="date" value="2026-09-22">
+                </div>
+
+                <!-- Orders Table Card -->
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <h3>Orders Stream</h3>
+                        <span class="badge badge-primary">Showing 6 Orders</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive" style="border: none;">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Order ID</th>
+                                        <th>Customer Details</th>
+                                        <th>Food Items & Quantity</th>
+                                        <th>Amount</th>
+                                        <th>Order Time</th>
+                                        <th>Status</th>
+                                        <th>Update Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>#FD10245</strong></td>
+                                        <td>
+                                            <strong>Rahul Sharma</strong>
+                                            <div class="text-muted" style="font-size: 0.75rem;">Bandra West • +91 98765 43210</div>
+                                        </td>
+                                        <td>
+                                            <span style="font-weight: 500;">1× Paneer Tikka</span>
+                                            <div class="text-muted" style="font-size: 0.75rem;">Note: Extra mint chutney</div>
+                                        </td>
+                                        <td><strong>₹219</strong></td>
+                                        <td>09:45 PM <div class="text-muted" style="font-size: 0.75rem;">12 mins ago</div></td>
+                                        <td><span class="badge badge-warning">⚡ Preparing</span></td>
+                                        <td>
+                                            <div style="display: flex; gap: 6px; align-items: center;">
+                                                <select style="font-size: 0.8125rem; padding: 4px 8px; border: 1px solid var(--border); border-radius: var(--radius);">
+                                                    <option value="ready" selected>Mark as Ready</option>
+                                                    <option value="out">Out for Delivery</option>
+                                                    <option value="cancel">Reject / Cancel</option>
+                                                </select>
+                                                <button type="button" class="btn btn-primary btn-sm">Save</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><strong>#FD10244</strong></td>
+                                        <td>
+                                            <strong>Priya Patel</strong>
+                                            <div class="text-muted" style="font-size: 0.75rem;">Juhu • +91 98111 22334</div>
+                                        </td>
+                                        <td>
+                                            <span style="font-weight: 500;">2× Butter Chicken, 4× Garlic Naan</span>
+                                            <div class="text-muted" style="font-size: 0.75rem;">Medium spicy</div>
+                                        </td>
+                                        <td><strong>₹720</strong></td>
+                                        <td>09:20 PM <div class="text-muted" style="font-size: 0.75rem;">37 mins ago</div></td>
+                                        <td><span class="badge badge-info">📦 Ready for Pickup</span></td>
+                                        <td>
+                                            <div style="display: flex; gap: 6px; align-items: center;">
+                                                <select style="font-size: 0.8125rem; padding: 4px 8px; border: 1px solid var(--border); border-radius: var(--radius);">
+                                                    <option value="out" selected>Hand to Rider</option>
+                                                    <option value="delivered">Delivered</option>
+                                                </select>
+                                                <button type="button" class="btn btn-primary btn-sm">Save</button>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><strong>#FD10240</strong></td>
+                                        <td>
+                                            <strong>Amit Verma</strong>
+                                            <div class="text-muted" style="font-size: 0.75rem;">Khar • +91 98222 33445</div>
+                                        </td>
+                                        <td>
+                                            <span style="font-weight: 500;">1× Dal Makhani, 2× Jeera Rice</span>
+                                        </td>
+                                        <td><strong>₹340</strong></td>
+                                        <td>08:55 PM <div class="text-muted" style="font-size: 0.75rem;">1 hr ago</div></td>
+                                        <td><span class="badge badge-primary">🛵 Out for Delivery</span></td>
+                                        <td>
+                                            <span class="text-muted" style="font-size: 0.8125rem;">Rider: Ramesh K.</span>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><strong>#FD10238</strong></td>
+                                        <td>
+                                            <strong>Sneha Iyer</strong>
+                                            <div class="text-muted" style="font-size: 0.75rem;">Santacruz • +91 98333 44556</div>
+                                        </td>
+                                        <td>
+                                            <span style="font-weight: 500;">1× Paneer Tikka, 1× Masala Kulcha</span>
+                                        </td>
+                                        <td><strong>₹279</strong></td>
+                                        <td>08:30 PM <div class="text-muted" style="font-size: 0.75rem;">1.5 hrs ago</div></td>
+                                        <td><span class="badge badge-success">✓ Delivered</span></td>
+                                        <td>
+                                            <span class="text-muted" style="font-size: 0.8125rem;">Completed</span>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><strong>#FD10232</strong></td>
+                                        <td>
+                                            <strong>Karan Malhotra</strong>
+                                            <div class="text-muted" style="font-size: 0.75rem;">Andheri West • +91 98444 55667</div>
+                                        </td>
+                                        <td>
+                                            <span style="font-weight: 500;">2× Chicken Biryani Special</span>
+                                        </td>
+                                        <td><strong>₹598</strong></td>
+                                        <td>07:45 PM <div class="text-muted" style="font-size: 0.75rem;">2.2 hrs ago</div></td>
+                                        <td><span class="badge badge-success">✓ Delivered</span></td>
+                                        <td>
+                                            <span class="text-muted" style="font-size: 0.8125rem;">Completed</span>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><strong>#FD10229</strong></td>
+                                        <td>
+                                            <strong>Neha Roy</strong>
+                                            <div class="text-muted" style="font-size: 0.75rem;">Bandra East • +91 98555 66778</div>
+                                        </td>
+                                        <td>
+                                            <span style="font-weight: 500;">1× Gulab Jamun, 1× Paneer Tikka</span>
+                                        </td>
+                                        <td><strong>₹308</strong></td>
+                                        <td>07:15 PM <div class="text-muted" style="font-size: 0.75rem;">2.7 hrs ago</div></td>
+                                        <td><span class="badge badge-danger">✕ Cancelled</span></td>
+                                        <td>
+                                            <span class="text-muted" style="font-size: 0.8125rem;">Refund Processed</span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

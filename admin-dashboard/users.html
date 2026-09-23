@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Manage Users - View, filter, and control user access across customers, restaurant partners, and staff.">
+    <title>Manage Users — BiteBuddy Admin</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+    <div class="dashboard-layout">
+        <!-- ===== Sidebar ===== -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>⚡ BiteBuddy Admin</h2>
+                <p>Master Platform Control</p>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <div class="nav-section-title">Overview</div>
+                    <a href="index.html"><span class="nav-icon">📈</span> Dashboard</a>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Management</div>
+                    <a href="users.html" class="active"><span class="nav-icon">👥</span> Users</a>
+                    <a href="restaurants.html"><span class="nav-icon">🏪</span> Restaurants</a>
+                    <a href="food-items.html"><span class="nav-icon">🍔</span> Food Items</a>
+                    <a href="orders.html"><span class="nav-icon">📦</span> Orders</a>
+                    <a href="reviews.html"><span class="nav-icon">⭐</span> Reviews</a>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Portals</div>
+                    <a href="../restaurant-dashboard/index.html"><span class="nav-icon">👨‍🍳</span> Restaurant Panel</a>
+                    <a href="../index.html"><span class="nav-icon">🏠</span> Customer Site</a>
+                </div>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="../login.html"><span class="nav-icon">🚪</span> Logout</a>
+            </div>
+        </aside>
+
+        <!-- ===== Main Content ===== -->
+        <div class="dashboard-main">
+            <!-- Header -->
+            <header class="dashboard-header">
+                <div>
+                    <h1>Registered Users Directory</h1>
+                    <p class="text-muted" style="margin-bottom: 0; font-size: 0.875rem;">Manage accounts, permission roles, and status for 12,450 users</p>
+                </div>
+                <div class="header-right">
+                    <div class="user-info">
+                        <div class="user-avatar">
+                            <img src="../images/avatars/admin-avatar.jpg" alt="Super Admin">
+                        </div>
+                        <div>
+                            <strong>Super Admin</strong>
+                            <div class="text-muted" style="font-size: 0.75rem;">admin@bitebuddy.com</div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Content Area -->
+            <div class="dashboard-content">
+                <!-- Filters Bar -->
+                <div class="dashboard-filters">
+                    <span class="filter-label">Filter Users:</span>
+                    <input type="search" placeholder="Search by name, email, or user ID...">
+                    <select>
+                        <option value="">All Platform Roles</option>
+                        <option value="customer">Customers</option>
+                        <option value="restaurant">Restaurant Owners</option>
+                        <option value="admin">Administrators</option>
+                    </select>
+                    <select>
+                        <option value="">All Account Statuses</option>
+                        <option value="active">Active</option>
+                        <option value="suspended">Suspended</option>
+                    </select>
+                </div>
+
+                <!-- Users Table Card -->
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <h3>Registered Accounts (8 sample records)</h3>
+                        <span class="badge badge-primary">Total 12,450 Users</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive" style="border: none;">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>User ID</th>
+                                        <th>User Name</th>
+                                        <th>Email Address</th>
+                                        <th>Phone Number</th>
+                                        <th>Platform Role</th>
+                                        <th>Status</th>
+                                        <th>Joined Date</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><strong>#U1001</strong></td>
+                                        <td>
+                                            <div style="display: flex; align-items: center; gap: 10px;">
+                                                <img src="../images/avatars/user-01.jpg" alt="Rahul Sharma" style="width: 32px; height: 32px; border-radius: 50%; object-fit: cover;">
+                                                <div>
+                                                    <strong>Rahul Sharma</strong>
+                                                    <div class="text-muted" style="font-size: 0.75rem;">Mumbai, MH</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>rahul.sharma@example.com</td>
+                                        <td>+91 98765 43210</td>
+                                        <td><span class="badge badge-info">Customer</span></td>
+                                        <td><span class="badge badge-success">Active</span></td>
+                                        <td>Jan 15, 2025</td>
+                                        <td class="actions">
+                                            <button type="button" class="btn btn-secondary btn-sm">Edit</button>
+                                            <button type="button" class="btn btn-danger btn-sm">Suspend</button>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><strong>#U1002</strong></td>
+                                        <td>
+                                            <div style="display: flex; align-items: center; gap: 10px;">
+                                                <img src="../images/avatars/chef-vikram.jpg" alt="Chef Vikram" style="width: 32px; height: 32px; border-radius: 50%; object-fit: cover;">
+                                                <div>
+                                                    <strong>Chef Vikram</strong>
+                                                    <div class="text-muted" style="font-size: 0.75rem;">Spice Route Owner</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>owner@spiceroute.com</td>
+                                        <td>+91 98111 22334</td>
+                                        <td><span class="badge badge-warning">Restaurant Owner</span></td>
+                                        <td><span class="badge badge-success">Active</span></td>
+                                        <td>Feb 01, 2025</td>
+                                        <td class="actions">
+                                            <button type="button" class="btn btn-secondary btn-sm">Edit</button>
+                                            <button type="button" class="btn btn-danger btn-sm">Suspend</button>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><strong>#U1003</strong></td>
+                                        <td>
+                                            <div style="display: flex; align-items: center; gap: 10px;">
+                                                <img src="../images/avatars/admin-avatar.jpg" alt="Super Admin" style="width: 32px; height: 32px; border-radius: 50%; object-fit: cover;">
+                                                <div>
+                                                    <strong>Super Admin</strong>
+                                                    <div class="text-muted" style="font-size: 0.75rem;">Platform Team</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>admin@bitebuddy.com</td>
+                                        <td>+91 98000 00001</td>
+                                        <td><span class="badge badge-primary">Administrator</span></td>
+                                        <td><span class="badge badge-success">Active</span></td>
+                                        <td>Jan 01, 2025</td>
+                                        <td class="actions">
+                                            <button type="button" class="btn btn-secondary btn-sm">Edit</button>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><strong>#U1004</strong></td>
+                                        <td>
+                                            <div style="display: flex; align-items: center; gap: 10px;">
+                                                <img src="../images/avatars/user-02.jpg" alt="Priya Patel" style="width: 32px; height: 32px; border-radius: 50%; object-fit: cover;">
+                                                <div>
+                                                    <strong>Priya Patel</strong>
+                                                    <div class="text-muted" style="font-size: 0.75rem;">Mumbai, MH</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>priya.p@example.com</td>
+                                        <td>+91 98222 33445</td>
+                                        <td><span class="badge badge-info">Customer</span></td>
+                                        <td><span class="badge badge-success">Active</span></td>
+                                        <td>Mar 10, 2025</td>
+                                        <td class="actions">
+                                            <button type="button" class="btn btn-secondary btn-sm">Edit</button>
+                                            <button type="button" class="btn btn-danger btn-sm">Suspend</button>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><strong>#U1005</strong></td>
+                                        <td>
+                                            <div style="display: flex; align-items: center; gap: 10px;">
+                                                <img src="../images/restaurants/burger-house.jpg" alt="Mike Chen" style="width: 32px; height: 32px; border-radius: 50%; object-fit: cover;">
+                                                <div>
+                                                    <strong>Mike Chen</strong>
+                                                    <div class="text-muted" style="font-size: 0.75rem;">The Burger House</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>mike@burgerhouse.com</td>
+                                        <td>+91 98333 44556</td>
+                                        <td><span class="badge badge-warning">Restaurant Owner</span></td>
+                                        <td><span class="badge badge-success">Active</span></td>
+                                        <td>Feb 14, 2025</td>
+                                        <td class="actions">
+                                            <button type="button" class="btn btn-secondary btn-sm">Edit</button>
+                                            <button type="button" class="btn btn-danger btn-sm">Suspend</button>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><strong>#U1006</strong></td>
+                                        <td>
+                                            <div style="display: flex; align-items: center; gap: 10px;">
+                                                <img src="../images/avatars/user-03.jpg" alt="Amit Verma" style="width: 32px; height: 32px; border-radius: 50%; object-fit: cover;">
+                                                <div>
+                                                    <strong>Amit Verma</strong>
+                                                    <div class="text-muted" style="font-size: 0.75rem;">Mumbai, MH</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>amit.v@example.com</td>
+                                        <td>+91 98444 55667</td>
+                                        <td><span class="badge badge-info">Customer</span></td>
+                                        <td><span class="badge badge-success">Active</span></td>
+                                        <td>Apr 05, 2025</td>
+                                        <td class="actions">
+                                            <button type="button" class="btn btn-secondary btn-sm">Edit</button>
+                                            <button type="button" class="btn btn-danger btn-sm">Suspend</button>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><strong>#U1007</strong></td>
+                                        <td>
+                                            <div style="display: flex; align-items: center; gap: 10px;">
+                                                <img src="../images/avatars/user-02.jpg" alt="Sneha Iyer" style="width: 32px; height: 32px; border-radius: 50%; object-fit: cover;">
+                                                <div>
+                                                    <strong>Sneha Iyer</strong>
+                                                    <div class="text-muted" style="font-size: 0.75rem;">Mumbai, MH</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>sneha.i@example.com</td>
+                                        <td>+91 98555 66778</td>
+                                        <td><span class="badge badge-info">Customer</span></td>
+                                        <td><span class="badge badge-success">Active</span></td>
+                                        <td>May 12, 2025</td>
+                                        <td class="actions">
+                                            <button type="button" class="btn btn-secondary btn-sm">Edit</button>
+                                            <button type="button" class="btn btn-danger btn-sm">Suspend</button>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><strong>#U1008</strong></td>
+                                        <td>
+                                            <div style="display: flex; align-items: center; gap: 10px;">
+                                                <img src="../images/avatars/user-01.jpg" alt="Rohan Kapoor" style="width: 32px; height: 32px; border-radius: 50%; object-fit: cover;">
+                                                <div>
+                                                    <strong>Rohan Kapoor</strong>
+                                                    <div class="text-muted" style="font-size: 0.75rem;">Account Suspended for abuse</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>rohan.k@example.com</td>
+                                        <td>+91 98666 77889</td>
+                                        <td><span class="badge badge-info">Customer</span></td>
+                                        <td><span class="badge badge-danger">Suspended</span></td>
+                                        <td>Jun 20, 2025</td>
+                                        <td class="actions">
+                                            <button type="button" class="btn btn-secondary btn-sm">Reactivate</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

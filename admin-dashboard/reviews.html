@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Customer Reviews Moderation - Review feedback, audit star ratings, and moderate public comments on BiteBuddy.">
+    <title>Customer Reviews — BiteBuddy Admin</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+
+    <div class="dashboard-layout">
+        <!-- ===== Sidebar ===== -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>⚡ BiteBuddy Admin</h2>
+                <p>Master Platform Control</p>
+            </div>
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <div class="nav-section-title">Overview</div>
+                    <a href="index.html"><span class="nav-icon">📈</span> Dashboard</a>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Management</div>
+                    <a href="users.html"><span class="nav-icon">👥</span> Users</a>
+                    <a href="restaurants.html"><span class="nav-icon">🏪</span> Restaurants</a>
+                    <a href="food-items.html"><span class="nav-icon">🍔</span> Food Items</a>
+                    <a href="orders.html"><span class="nav-icon">📦</span> Orders</a>
+                    <a href="reviews.html" class="active"><span class="nav-icon">⭐</span> Reviews</a>
+                </div>
+                <div class="nav-section">
+                    <div class="nav-section-title">Portals</div>
+                    <a href="../restaurant-dashboard/index.html"><span class="nav-icon">👨‍🍳</span> Restaurant Panel</a>
+                    <a href="../index.html"><span class="nav-icon">🏠</span> Customer Site</a>
+                </div>
+            </nav>
+            <div class="sidebar-footer">
+                <a href="../login.html"><span class="nav-icon">🚪</span> Logout</a>
+            </div>
+        </aside>
+
+        <!-- ===== Main Content ===== -->
+        <div class="dashboard-main">
+            <!-- Header -->
+            <header class="dashboard-header">
+                <div>
+                    <h1>Customer Feedback & Reviews</h1>
+                    <p class="text-muted" style="margin-bottom: 0; font-size: 0.875rem;">Audit community ratings, food taste testimonials, and maintain review integrity</p>
+                </div>
+                <div class="header-right">
+                    <div class="user-info">
+                        <div class="user-avatar">
+                            <img src="../images/avatars/admin-avatar.jpg" alt="Super Admin">
+                        </div>
+                        <div>
+                            <strong>Super Admin</strong>
+                            <div class="text-muted" style="font-size: 0.75rem;">admin@bitebuddy.com</div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Content Area -->
+            <div class="dashboard-content">
+                <!-- Filters Bar -->
+                <div class="dashboard-filters">
+                    <span class="filter-label">Filter Reviews:</span>
+                    <input type="search" placeholder="Search by customer, dish or keyword...">
+                    <select>
+                        <option value="">All Ratings</option>
+                        <option value="5">5 Stars</option>
+                        <option value="4">4 Stars</option>
+                        <option value="3">3 Stars</option>
+                        <option value="2">2 Stars</option>
+                        <option value="1">1 Star</option>
+                    </select>
+                    <select>
+                        <option value="">All Review Statuses</option>
+                        <option value="approved">Approved</option>
+                        <option value="flagged">Flagged</option>
+                    </select>
+                </div>
+
+                <!-- Reviews Table Card -->
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <h3>Customer Reviews & Ratings (6 sample records)</h3>
+                        <span class="badge badge-success">Platform Avg: ★ 4.6</span>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive" style="border: none;">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Customer</th>
+                                        <th>Restaurant / Item</th>
+                                        <th>Rating</th>
+                                        <th>Commentary</th>
+                                        <th>Date</th>
+                                        <th>Status</th>
+                                        <th>Actions</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div style="display: flex; align-items: center; gap: 10px;">
+                                                <img src="../images/avatars/user-01.jpg" alt="Rahul Sharma" style="width: 32px; height: 32px; border-radius: 50%; object-fit: cover;">
+                                                <div>
+                                                    <strong>Rahul Sharma</strong>
+                                                    <div class="text-muted" style="font-size: 0.75rem;">Verified Diner</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div style="display: flex; align-items: center; gap: 10px;">
+                                                <img src="../images/restaurants/spice-route.jpg" alt="Spice Route" style="width: 36px; height: 36px; border-radius: 6px; object-fit: cover;">
+                                                <div>
+                                                    <strong>Spice Route</strong>
+                                                    <div class="text-muted" style="font-size: 0.75rem;">Dish: Paneer Tikka</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <span style="color: var(--warning); font-size: 0.9375rem;">★★★★★</span>
+                                            <div style="font-size: 0.75rem; font-weight: 600;">5.0</div>
+                                        </td>
+                                        <td style="max-width: 300px; font-size: 0.875rem;">
+                                            "The paneer was incredibly tender, perfectly smoked in the tandoor. Arrived piping hot!"
+                                        </td>
+                                        <td>Today, Sep 22</td>
+                                        <td><span class="badge badge-success">Approved</span></td>
+                                        <td class="actions">
+                                            <button type="button" class="btn btn-secondary btn-sm">Flag</button>
+                                            <button type="button" class="btn btn-danger btn-sm">Delete</button>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <div style="display: flex; align-items: center; gap: 10px;">
+                                                <img src="../images/avatars/user-02.jpg" alt="Priya Patel" style="width: 32px; height: 32px; border-radius: 50%; object-fit: cover;">
+                                                <div>
+                                                    <strong>Priya Patel</strong>
+                                                    <div class="text-muted" style="font-size: 0.75rem;">Verified Diner</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div style="display: flex; align-items: center; gap: 10px;">
+                                                <img src="../images/restaurants/pizza-palace.jpg" alt="Pizza Palace" style="width: 36px; height: 36px; border-radius: 6px; object-fit: cover;">
+                                                <div>
+                                                    <strong>Pizza Palace</strong>
+                                                    <div class="text-muted" style="font-size: 0.75rem;">Dish: Margherita Pizza</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <span style="color: var(--warning); font-size: 0.9375rem;">★★★★★</span>
+                                            <div style="font-size: 0.75rem; font-weight: 600;">5.0</div>
+                                        </td>
+                                        <td style="max-width: 300px; font-size: 0.875rem;">
+                                            "Best sourdough crust in town. Fresh mozzarella and vibrant basil leaves. 10/10 recommended."
+                                        </td>
+                                        <td>Sep 19</td>
+                                        <td><span class="badge badge-success">Approved</span></td>
+                                        <td class="actions">
+                                            <button type="button" class="btn btn-secondary btn-sm">Flag</button>
+                                            <button type="button" class="btn btn-danger btn-sm">Delete</button>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <div style="display: flex; align-items: center; gap: 10px;">
+                                                <img src="../images/avatars/user-03.jpg" alt="Amit Verma" style="width: 32px; height: 32px; border-radius: 50%; object-fit: cover;">
+                                                <div>
+                                                    <strong>Amit Verma</strong>
+                                                    <div class="text-muted" style="font-size: 0.75rem;">Verified Diner</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div style="display: flex; align-items: center; gap: 10px;">
+                                                <img src="../images/restaurants/green-bowl.jpg" alt="Green Bowl" style="width: 36px; height: 36px; border-radius: 6px; object-fit: cover;">
+                                                <div>
+                                                    <strong>Green Bowl</strong>
+                                                    <div class="text-muted" style="font-size: 0.75rem;">Dish: Veggie Bowl</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <span style="color: var(--warning); font-size: 0.9375rem;">★★★★☆</span>
+                                            <div style="font-size: 0.75rem; font-weight: 600;">4.0</div>
+                                        </td>
+                                        <td style="max-width: 300px; font-size: 0.875rem;">
+                                            "Very crisp ingredients and generous dressing, but the delivery took 10 minutes longer than estimated."
+                                        </td>
+                                        <td>Sep 10</td>
+                                        <td><span class="badge badge-success">Approved</span></td>
+                                        <td class="actions">
+                                            <button type="button" class="btn btn-secondary btn-sm">Flag</button>
+                                            <button type="button" class="btn btn-danger btn-sm">Delete</button>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <div style="display: flex; align-items: center; gap: 10px;">
+                                                <img src="../images/avatars/user-02.jpg" alt="Sneha Iyer" style="width: 32px; height: 32px; border-radius: 50%; object-fit: cover;">
+                                                <div>
+                                                    <strong>Sneha Iyer</strong>
+                                                    <div class="text-muted" style="font-size: 0.75rem;">Verified Diner</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div style="display: flex; align-items: center; gap: 10px;">
+                                                <img src="../images/restaurants/royal-biryani.jpg" alt="Royal Biryani" style="width: 36px; height: 36px; border-radius: 6px; object-fit: cover;">
+                                                <div>
+                                                    <strong>Royal Biryani</strong>
+                                                    <div class="text-muted" style="font-size: 0.75rem;">Dish: Chicken Biryani</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <span style="color: var(--warning); font-size: 0.9375rem;">★★★★★</span>
+                                            <div style="font-size: 0.75rem; font-weight: 600;">5.0</div>
+                                        </td>
+                                        <td style="max-width: 300px; font-size: 0.875rem;">
+                                            "Authentic Hyderabadi flavor with fragrant saffron basmati rice and rich spices. Will reorder again!"
+                                        </td>
+                                        <td>Sep 15</td>
+                                        <td><span class="badge badge-success">Approved</span></td>
+                                        <td class="actions">
+                                            <button type="button" class="btn btn-secondary btn-sm">Flag</button>
+                                            <button type="button" class="btn btn-danger btn-sm">Delete</button>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <div style="display: flex; align-items: center; gap: 10px;">
+                                                <img src="../images/avatars/user-01.jpg" alt="Rohan Kapoor" style="width: 32px; height: 32px; border-radius: 50%; object-fit: cover;">
+                                                <div>
+                                                    <strong>Rohan Kapoor</strong>
+                                                    <div class="text-muted" style="font-size: 0.75rem;">Flagged Account</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div style="display: flex; align-items: center; gap: 10px;">
+                                                <img src="../images/restaurants/cafe-aroma.jpg" alt="Café Aroma" style="width: 36px; height: 36px; border-radius: 6px; object-fit: cover;">
+                                                <div>
+                                                    <strong>Café Aroma</strong>
+                                                    <div class="text-muted" style="font-size: 0.75rem;">Dish: Cold Coffee</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <span style="color: var(--danger); font-size: 0.9375rem;">★☆☆☆☆</span>
+                                            <div style="font-size: 0.75rem; font-weight: 600;">1.0</div>
+                                        </td>
+                                        <td style="max-width: 300px; font-size: 0.875rem;">
+                                            "Spilled inside the package and tasted watered down. Customer support resolved with instant refund."
+                                        </td>
+                                        <td>Sep 04</td>
+                                        <td><span class="badge badge-warning">Flagged (Dispute)</span></td>
+                                        <td class="actions">
+                                            <button type="button" class="btn btn-primary btn-sm">Approve</button>
+                                            <button type="button" class="btn btn-danger btn-sm">Hide</button>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>
+                                            <div style="display: flex; align-items: center; gap: 10px;">
+                                                <img src="../images/avatars/user-02.jpg" alt="Neha Roy" style="width: 32px; height: 32px; border-radius: 50%; object-fit: cover;">
+                                                <div>
+                                                    <strong>Neha Roy</strong>
+                                                    <div class="text-muted" style="font-size: 0.75rem;">Verified Diner</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div style="display: flex; align-items: center; gap: 10px;">
+                                                <img src="../images/restaurants/burger-house.jpg" alt="The Burger House" style="width: 36px; height: 36px; border-radius: 6px; object-fit: cover;">
+                                                <div>
+                                                    <strong>The Burger House</strong>
+                                                    <div class="text-muted" style="font-size: 0.75rem;">Dish: Classic Chicken Burger</div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <span style="color: var(--warning); font-size: 0.9375rem;">★★★★★</span>
+                                            <div style="font-size: 0.75rem; font-weight: 600;">5.0</div>
+                                        </td>
+                                        <td style="max-width: 300px; font-size: 0.875rem;">
+                                            "Crispy golden patty, fresh lettuce and delicious secret sauce! One of the best fast food burgers."
+                                        </td>
+                                        <td>Sep 01</td>
+                                        <td><span class="badge badge-success">Approved</span></td>
+                                        <td class="actions">
+                                            <button type="button" class="btn btn-secondary btn-sm">Flag</button>
+                                            <button type="button" class="btn btn-danger btn-sm">Delete</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
