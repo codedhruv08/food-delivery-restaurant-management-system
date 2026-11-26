@@ -40,8 +40,11 @@
                     <p class="text-muted">Thank you for your order. The restaurant is preparing your delicious meal right now.</p>
                     
                     <div class="order-id">
-                        Order ID: <span style="color: var(--primary);">#FD10245</span>
-                    </div>
+    Order ID:
+    <span id="order-id" style="color: var(--primary);">
+        Loading...
+    </span>
+</div>
 
                     <div class="delivery-estimate">
                         <div class="est-label">Estimated Delivery Time</div>
@@ -51,34 +54,41 @@
                     <!-- Order Details Summary Card -->
                     <div class="card text-left mb-3" style="text-align: left;">
                         <h4 class="mb-2" style="border-bottom: 1px solid var(--border); padding-bottom: 8px;">Order Details</h4>
-                        <div class="profile-info-grid mb-2">
-                            <div class="profile-info-item">
-                                <label>Delivery Address</label>
-                                <span>Flat 402, Sunshine Heights, Bandra West, Mumbai</span>
-                            </div>
-                            <div class="profile-info-item">
-                                <label>Payment Method</label>
-                                <span>Cash on Delivery (COD)</span>
-                            </div>
-                            <div class="profile-info-item">
-                                <label>Order Date & Time</label>
-                                <span>September 22, 2026 • Just now</span>
-                            </div>
-                            <div class="profile-info-item">
-                                <label>Total Amount</label>
-                                <span style="color: var(--primary); font-weight: 700;">₹868 (Paid via COD)</span>
-                            </div>
-                        </div>
+                        
+<div class="profile-info-grid mb-2">
 
-                        <div style="background-color: var(--background); padding: 12px 16px; border-radius: var(--radius); font-size: 0.875rem;">
-                            <strong>Items in this order:</strong>
-                            <ul style="margin: 6px 0 0 16px; color: var(--text);">
-                                <li>1 × Paneer Tikka (Spice Route) — ₹219</li>
-                                <li>2 × Chicken Biryani (Royal Biryani) — ₹598</li>
-                                <li>1 × Cold Coffee (Café Aroma) — ₹99</li>
-                            </ul>
-                        </div>
-                    </div>
+    <div class="profile-info-item">
+        <label>Delivery Address</label>
+        <span id="order-address">Loading...</span>
+    </div>
+
+    <div class="profile-info-item">
+        <label>Payment Method</label>
+        <span id="order-payment">Loading...</span>
+    </div>
+
+    <div class="profile-info-item">
+        <label>Order Date & Time</label>
+        <span id="order-date">Loading...</span>
+    </div>
+
+    <div class="profile-info-item">
+        <label>Total Amount</label>
+        <span id="order-total"
+              style="color: var(--primary); font-weight: 700;">
+            Loading...
+        </span>
+    </div>
+
+</div>
+
+<div style="background-color: var(--background); padding: 12px 16px; border-radius: var(--radius); font-size: 0.875rem;">
+    <strong>Items in this order:</strong>
+    <ul id="order-items"
+        style="margin: 6px 0 0 16px; color: var(--text);">
+        <li>Loading items...</li>
+    </ul>
+</div>
 
                     <div class="success-actions">
                         <a href="my-orders.html" class="btn btn-primary btn-lg">View My Orders</a>
@@ -129,6 +139,6 @@
             </div>
         </div>
     </footer>
-
+ <script src="js/confirmation.js"></script>
 </body>
 </html>
