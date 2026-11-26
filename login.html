@@ -38,7 +38,9 @@
                     <h1>Welcome Back</h1>
                     <p>Enter your credentials to access your account</p>
 
-                    <form action="profile.html" method="get">
+                    <div id="loginError" role="alert" style="display: none; margin-bottom: 16px; padding: 12px 14px; border-radius: var(--radius); background-color: #fdecea; color: #b42318; font-size: 0.875rem;"></div>
+
+                    <form id="loginForm" novalidate>
                         <div class="form-group">
                             <label for="loginEmail">Email Address</label>
                             <input type="email" id="loginEmail" name="email" placeholder="name@example.com" value="rahul.sharma@example.com" required>
@@ -57,7 +59,7 @@
                             <label for="rememberMe">Remember me on this device</label>
                         </div>
 
-                        <button type="submit" class="btn btn-primary btn-block btn-lg">Sign In</button>
+                        <button type="submit" id="loginBtn" class="btn btn-primary btn-block btn-lg">Sign In</button>
                     </form>
 
                     <!-- Quick Demo Credentials Box -->
@@ -119,5 +121,6 @@
         </div>
     </footer>
 
+    <script src="js/auth.js"></script>
 </body>
 </html>
