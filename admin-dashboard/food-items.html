@@ -83,6 +83,60 @@
                     </select>
                 </div>
 
+<!-- API CRUD Demo -->
+<div class="dashboard-card" style="margin-bottom: 25px;">
+    <div class="card-header">
+        <h3>API Food Management</h3>
+        <span class="badge badge-primary">REST API Demo</span>
+    </div>
+
+    <div class="card-body">
+
+        <label>Product ID</label>
+        <input type="number" id="productId" value="1"
+               min="1" style="margin-bottom: 12px;">
+
+        <label>Food Name</label>
+        <input type="text" id="foodName"
+               value="Chicken Burger"
+               style="margin-bottom: 12px;">
+
+        <label>Price</label>
+        <input type="number" id="foodPrice"
+               value="199" min="1"
+               style="margin-bottom: 12px;">
+
+        <label>Description</label>
+        <input type="text" id="foodDescription"
+               value="Delicious food item"
+               style="margin-bottom: 15px;">
+
+        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+
+            <button class="btn btn-primary" id="putBtn">
+                PUT - Update All
+            </button>
+
+            <button class="btn btn-secondary" id="patchBtn">
+                PATCH - Update Price
+            </button>
+
+            <button class="btn btn-danger" id="deleteBtn">
+                DELETE - Remove
+            </button>
+
+        </div>
+
+        <div id="api-result"
+             style="margin-top:20px; padding:12px;
+             background:var(--background); border-radius:8px;">
+            API response will appear here.
+        </div>
+
+    </div>
+</div>
+
+
                 <!-- Food Items Table Card -->
                 <div class="dashboard-card">
                     <div class="card-header">
@@ -296,6 +350,6 @@
             </div>
         </div>
     </div>
-
+<script src="../js/admin-api.js"></script>
 </body>
 </html>
